@@ -209,6 +209,15 @@ Note that in the Euclidean case, $\langle u, v \rangle = 0$ directly. In the Her
     the unitary matrices, the self-adjoint (Hermitian) matrices, the symmetric matrices, and the normal matrices.
     \item Let $A \in \M_{n \times n}(\mathbb{C})$ be a Hermitian matrix. Prove that $\Tr(A) \in \mathbb{R}$ and $\det(A) \in \mathbb{R}$.
   \end{enumerate}
+  % Who wrote this hint: unknown. It may be official, or not. It arrived
+  % unlabelled with the Problem Sheet 24 integration (82d4769), whose commit
+  % message says it brought in hints translated from Y. Staeubli's
+  % "Tipps Serie 24"; 052dfd3 then labelled it [Official Hint], and
+  % ce04d2f reset it to a bare [Hint] when it found 54 such labels fabricated
+  % and could not attribute this one. It reads like an answer key, so it may
+  % come from the official solutions, from Y. Staeubli's tip sheet, or from
+  % the transcribing model itself. Check the sheet and the tip sheet before
+  % giving it one of the three provenance labels.
   \exhint[Hint]{(a) Compute $A^* A = \left(\begin{smallmatrix} \overline{x} & \overline{x} \\ -\overline{x} & \overline{x} \end{smallmatrix}\right) \left(\begin{smallmatrix} x & -x \\ x & x \end{smallmatrix}\right) = \left(\begin{smallmatrix} 2|x|^2 & 0 \\ 0 & 2|x|^2 \end{smallmatrix}\right)$. This equals $I_2$ if and only if $2|x|^2 = 1 \iff |x|^2 = 1/2$.
   (b) The symmetric matrices form a $\mathbb{C}$-subspace because $(A + \alpha B)\transp = A\transp + \alpha B\transp = A + \alpha B$ for all $\alpha \in \mathbb{C}$. The Hermitian matrices do not form a $\mathbb{C}$-subspace, because $(i A)^* = -i A^* = -i A \ne i A$ for $A \ne 0$.
   (c) Since $A^* = A$, we have $\overline{\Tr(A)} = \Tr(\overline{A}) = \Tr(\overline{A}\transp) = \Tr(A^*) = \Tr(A)$, so $\Tr(A) \in \mathbb{R}$. Similarly, $\overline{\det(A)} = \det(\overline{A}) = \det(\overline{A}\transp) = \det(A^*) = \det(A)$, so $\det(A) \in \mathbb{R}$.}

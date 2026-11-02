@@ -23,18 +23,28 @@
 \label{thm:singular_value_decomposition}
 \defterm{singular value decomposition}
 Let $K = \mathbb{R}$ or $\mathbb{C}$, and let $A \in \M_{m \times n}(K)$. Then there exist $P \in \Orth(m)$ (if $K = \mathbb{R}$) or $P \in \Unit(m)$ (if $K = \mathbb{C}$), and $Q \in \Orth(n)$ (if $K = \mathbb{R}$) or $Q \in \Unit(n)$ (if $K = \mathbb{C}$), and a \qt{diagonal} matrix
+% Creator: Opus 5.5
+% The notes draw D with the diagonal block over a row of zeros only, which has
+% k columns rather than n; for k < n it lacks the zero block on the right. The
+% zero column block is added here, and the parenthetical after the display says
+% which blocks may be empty. For k = n, the only case the proof treats, the
+% picture is unchanged.
 \[
 D = \left(
-\begin{array}{ccc}
-\lambda_1 & & 0 \\
-& \ddots & \\
-0 & & \lambda_k \\
+\begin{array}{ccc|c}
+\lambda_1 & & 0 & \\
+& \ddots & & 0 \\
+0 & & \lambda_k & \\
 \hline
-\multicolumn{3}{c}{0 \dots 0}
+\multicolumn{3}{c|}{0} & 0
 \end{array}
 \right) \in \M_{m \times n}(\mathbb{R})
 \]
+% Extractor: Gemini 3.1 Pro
 with $\lambda_1, \dots, \lambda_k > 0$, where $k = \rank A$, such that $A = P D Q^{-1}$.
+% Creator: Opus 5.5
+(The upper left block is $k \times k$; the zero blocks fill $D$ out to $m \times n$, so the one on the right has $n - k$ columns and the one below has $m - k$ rows, and either is absent when $k = n$, resp. $k = m$.)
+% Extractor: Gemini 3.1 Pro
 \end{theorem}
 
 \begin{remark}
