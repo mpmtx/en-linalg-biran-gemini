@@ -86,7 +86,7 @@ C^* C &= \begin{pmatrix} \lambda_1^{-1} & & 0 \\ & \ddots & \\ 0 & & \lambda_n^{
 &= I_n.
 \end{align*}
 % Creator: Opus 5
-(Two adjoints are taken silently here. By \cref{prop:properties_adjoint_matrix} \textbf{(e)}, $C^* = \left(\operatorname{diag}(\lambda_j^{-1})\right)^* Q^* A^*$, and the two factors on the left simplify: the diagonal matrix has real entries, so it is its own adjoint, while $Q^* = Q^{-1}$ because $Q$ is orthogonal, resp. unitary, by \cref{lem:char_orthogonal_matrices} \textbf{(d)}, resp. \cref{lem:char_unitary_matrices} \textbf{(d)}. The final equality is then entry by entry: the product of the three diagonal matrices is $\operatorname{diag}(\eta_j / \lambda_j^2) = I_n$, since $\lambda_j^2 = \eta_j$).
+(Two adjoints are taken silently here. By \cref{prop:properties_adjoint_matrix} \textbf{(e)}, $C^* = \left(\diag(\lambda_j^{-1})\right)^* Q^* A^*$, and the two factors on the left simplify: the diagonal matrix has real entries, so it is its own adjoint, while $Q^* = Q^{-1}$ because $Q$ is orthogonal, resp. unitary, by \cref{lem:char_orthogonal_matrices} \textbf{(d)}, resp. \cref{lem:char_unitary_matrices} \textbf{(d)}. The final equality is then entry by entry: the product of the three diagonal matrices is $\diag(\eta_j / \lambda_j^2) = I_n$, since $\lambda_j^2 = \eta_j$).
 % Extractor: Gemini 3.1 Pro
 
 It follows that the columns of $C$ form an orthonormal system of vectors in $K^m$. To see this explicitly, let $c_1, \dots, c_n$ be the columns of $C$. The identity $C^* C = I_n$ means:

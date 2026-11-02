@@ -77,7 +77,7 @@ Since $\{v_\lambda\}_{\lambda \in \mathbb{R}}$ has cardinality $2^{\aleph_0} > \
     \]
     Since $G(v) \ne 0$, $G(v)$ is an eigenvector of $G \circ F$ with eigenvalue $\lambda$.
 
-    \item Let $V$ be finite-dimensional.
+    \item Let $V$ be finite-di\-men\-sional.
     \begin{itemize}
         \item If $\lambda \ne 0$ is an eigenvalue of $F \circ G$ with eigenvector $v$, then $G(v) \ne 0$ (otherwise $(F \circ G)(v) = F(0) = 0 \ne \lambda v$), so by part \textbf{(a)}, $\lambda$ is an eigenvalue of $G \circ F$.
         \item If $\lambda = 0$ is an eigenvalue of $F \circ G$, then $F \circ G$ is not injective, hence not invertible. In finite dimensions, $\det(F \circ G) = \det(F) \det(G) = 0$, so $\det(G \circ F) = \det(G) \det(F) = 0$, which implies $G \circ F$ is not invertible and therefore has $0$ as an eigenvalue.
@@ -325,7 +325,7 @@ A = \begin{pmatrix} 3 & 0 & -2 \\ 2 & 0 & -2 \\ 0 & 1 & 1 \end{pmatrix} \in \M_{
 \begin{exercisesolution}[Solution to \cref{exc:trace_determinant_char_poly_diagonalizable}]
 \label{sol:trace_determinant_char_poly_diagonalizable}
 \begin{enumerate}[label=\textbf{(\alph*)}]
-    \item Let $\mathcal{B}$ be a basis of eigenvectors of $T$. Then $[T]_\mathcal{B}^\mathcal{B} = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$.
+    \item Let $\mathcal{B}$ be a basis of eigenvectors of $T$. Then $[T]_\mathcal{B}^\mathcal{B} = \diag(\lambda_1, \dots, \lambda_n)$.
     By basis invariance of trace and determinant:
     \[
     \Tr(T) = \Tr([T]_\mathcal{B}^\mathcal{B}) = \sum_{i=1}^n \lambda_i, \qquad \det(T) = \det([T]_\mathcal{B}^\mathcal{B}) = \prod_{i=1}^n \lambda_i.
@@ -439,9 +439,9 @@ The statement is \textbf{true}: such a matrix $A \in \M_{n \times n}(\mathbb{R})
     J = \begin{pmatrix} -1 & -2 \\ 2 & -1 \end{pmatrix}.
     \]
     Direct computation shows $J^2 + 2J + 5I_2 = \left(\begin{smallmatrix} -3 & 4 \\ -4 & -3 \end{smallmatrix}\right) + \left(\begin{smallmatrix} -2 & -4 \\ 4 & -2 \end{smallmatrix}\right) + \left(\begin{smallmatrix} 5 & 0 \\ 0 & 5 \end{smallmatrix}\right) = 0$.
-    Defining the block diagonal matrix $A := \operatorname{diag}(J, \dots, J) \in \M_{2m \times 2m}(\mathbb{R})$ with $m$ copies of $J$ gives:
+    Defining the block diagonal matrix $A := \diag(J, \dots, J) \in \M_{2m \times 2m}(\mathbb{R})$ with $m$ copies of $J$ gives:
     \[
-    A^2 + 2A + 5I_n = \operatorname{diag}(J^2 + 2J + 5I_2, \dots, J^2 + 2J + 5I_2) = 0. \qedhere
+    A^2 + 2A + 5I_n = \diag(J^2 + 2J + 5I_2, \dots, J^2 + 2J + 5I_2) = 0. \qedhere
     \]
 \end{itemize}
 \exinfo{Hybrid Solution (Gemini 3.7 Flash / Official Problem Sheet 20, Exercise 6). Proves existence of real matrices with non-real quadratic annihilator if and only if dimension is even.}
@@ -463,7 +463,7 @@ By the definition of the minimal polynomial, $m_A(x)$ divides any annihilating p
 \[
 \deg(m_A) \le \deg(p) = r + 1. \qedhere
 \]
-\exinfo{Hybrid Solution (Gemini 3.7 Flash / Official Problem Sheet 20, Exercise 2). Bounds the minimal polynomial degree by $\operatorname{rank}(A) + 1$ via restriction and Cayley-Hamilton.}
+\exinfo{Hybrid Solution (Gemini 3.7 Flash / Official Problem Sheet 20, Exercise 2). Bounds the minimal polynomial degree by $\rank(A) + 1$ via restriction and Cayley-Hamilton.}
 \end{exercisesolution}
 
 % Solution: Gemini / Official Hybrid (Problem Sheet 20, Exercise 5)
@@ -524,11 +524,11 @@ Choose numbers $\delta_1, \dots, \delta_n \in \mathbb{C}$ such that:
     \item $\lambda_1 + \delta_1, \dots, \lambda_n + \delta_n$ are pairwise distinct;
     \item $|\delta_i| < \delta$ for all $i$, where $\delta := \frac{\varepsilon}{n^2 \|P\| \|P^{-1}\| + 1}$ (using the Frobenius norm).
 \end{enumerate}
-Define $T' := T + \operatorname{diag}(\delta_1, \dots, \delta_n)$ and $B := P T' P^{-1}$.
+Define $T' := T + \diag(\delta_1, \dots, \delta_n)$ and $B := P T' P^{-1}$.
 The diagonal entries of $T'$ are the distinct numbers $\lambda_i + \delta_i$, so $T'$ (and hence $B$) has $n$ distinct eigenvalues and is therefore diagonalizable.
 Moreover:
 \[
-|B_{ij} - A_{ij}| \le \|B - A\| = \|P (T' - T) P^{-1}\| \le \|P\| \|\operatorname{diag}(\delta_1, \dots, \delta_n)\| \|P^{-1}\| < \varepsilon
+|B_{ij} - A_{ij}| \le \|B - A\| = \|P (T' - T) P^{-1}\| \le \|P\| \|\diag(\delta_1, \dots, \delta_n)\| \|P^{-1}\| < \varepsilon
 \]
 for all $1 \le i, j \le n$.
 \exinfo{Hybrid Solution (Gemini 3.7 Flash / Official Problem Sheet 21, Exercise 3). Establishes topological density of diagonalizable matrices in $\M_{n \times n}(\mathbb{C})$.}
@@ -550,7 +550,7 @@ Summing over the finitely many terms $i = 0, 1, \dots, d$:
 \begin{exercisesolution}[Solution to \cref{exc:cayley_hamilton_via_density}]
 \label{sol:cayley_hamilton_via_density}
 \begin{enumerate}
-    \item \textbf{Diagonal matrices:} If $D = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$, then $P_D(x) = \prod_{i=1}^n (\lambda_i - x)$, and evaluating at $D$ yields $P_D(D) = \operatorname{diag}(P_D(\lambda_1), \dots, P_D(\lambda_n)) = 0$.
+    \item \textbf{Diagonal matrices:} If $D = \diag(\lambda_1, \dots, \lambda_n)$, then $P_D(x) = \prod_{i=1}^n (\lambda_i - x)$, and evaluating at $D$ yields $P_D(D) = \diag(P_D(\lambda_1), \dots, P_D(\lambda_n)) = 0$.
     \item \textbf{Diagonalizable matrices:} If $M = Q D Q^{-1}$ with $D$ diagonal, then $P_M(x) = P_D(x)$, and by \cref{exc:similarity_of_matrix_polynomials}:
     \[
     P_M(M) = P_M(Q D Q^{-1}) = Q P_M(D) Q^{-1} = Q P_D(D) Q^{-1} = Q \cdot 0 \cdot Q^{-1} = 0.

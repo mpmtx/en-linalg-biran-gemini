@@ -38,7 +38,7 @@ You are authorized to improve the prose and apply the established "House Style" 
   * **Composition Logic:** Matrices are multiplied such that the "inner" bases match diagonally. For $T: (V, \mathcal{B}) \to (W, \mathcal{C})$ and $S: (W, \mathcal{C}) \to (U, \mathcal{E})$: $[S \circ T]_{\mathcal{E}}^{\mathcal{B}} = [S]_{\mathcal{E}}^{\mathcal{C}} \cdot [T]_{\mathcal{C}}^{\mathcal{B}}$.
   * **Change of Basis:** For the identity map $\text{id}_V: (V, \mathcal{B}') \to (V, \mathcal{B})$, the transition matrix is $[\text{id}_V]_{\mathcal{B}}^{\mathcal{B}'}$.
 * **Indexing:** Be meticulously precise with eigenvector indexing. Follow this exact pattern for partitioned bases: \mathcal{B} = (v_1^{(1)}, \dots, v_{\ell_1}^{(1)}, v_1^{(2)}, \dots, v_{\ell_2}^{(2)}, \dots, v_1^{(k)}, \dots, v_{\ell_k}^{(k)}).
-* **Definitional Equal Sign (`:=`):** Always use `:=` (colon-equal) when introducing a new symbol, defining a set/function/subspace, or making a local assignment in proofs and definitions (e.g., `Let $r := \rank(A)$`, `Let $Q := \begin{pmatrix} ... \end{pmatrix}$`, `\operatorname{Im}(T) := \{T(v) \mid v \in V\}`, `\langle \cdot, \cdot \rangle' := \langle \cdot, \cdot \rangle_A`). Reserve standard `=` strictly for mathematical equations, identities, and calculations between existing quantities.
+* **Definitional Equal Sign (`:=`):** Always use `:=` (colon-equal) when introducing a new symbol, defining a set/function/subspace, or making a local assignment in proofs and definitions (e.g., `Let $r := \rank(A)$`, `Let $Q := \begin{pmatrix} ... \end{pmatrix}$`, `\Img(T) := \{T(v) \mid v \in V\}`, `\langle \cdot, \cdot \rangle' := \langle \cdot, \cdot \rangle_A`). Reserve standard `=` strictly for mathematical equations, identities, and calculations between existing quantities.
 * **Matrices & Long Display Equations:** Use `\begin{pmatrix}` for displayed block equations `\[ ... \]` and `\left(\begin{smallmatrix} ... \end{smallmatrix}\right)` for 2D matrices in inline math `$ ... $`. **Tall / Block Matrices:** Large matrices or multi-row block representations (such as column-block matrices $\begin{pmatrix} | & & | \\ v_1 & \dots & v_n \\ | & & | \end{pmatrix}$ or matrices with 3+ rows) must NEVER be written inline inside `$ ... $`; always elevate them to display math `\[ ... \]`.
   * **Multi-line Equation Splitting:** Never let wide display equations with large matrix blocks overflow page boundaries. Split them using `align` or `split` at major equal signs or logical steps. Suppress intermediate equation numbers using `\nonumber` unless specifically referenced.
     * **BAD Example (Single-line overflow):**
@@ -209,8 +209,11 @@ You are authorized to improve the prose and apply the established "House Style" 
 
 % \newterm also writes the index entry; the optional argument overrides it.
 \newcommand{\defterm}[1]{\index{#1|textbf}}
-\newcommand{\newterm}[2][]{\ifstrempty{#1}{\defterm{#2}}{\defterm{#1}}\glqq\textit{#2}\grqq}
-\newcommand{\qt}[1]{\textit{``#1''}}
+\newcommand{\newterm}[2][]{%
+  \ifstrempty{#1}{\defterm{#2}}{\defterm{#1}}%
+  \textcolor{QuoteRed}{``}\textcolor{TextBoldColor}{\textit{#2}}\textcolor{QuoteRed}{''}%
+}
+\newcommand{\qt}[1]{\textit{\textcolor{QuoteRed}{``}#1\textcolor{QuoteRed}{''}}}
 
 % --- MATH OPERATORS ---
 \newcommand{\M}{\mathcal{M}}
@@ -225,6 +228,22 @@ You are authorized to improve the prose and apply the established "House Style" 
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Fib}{Fib}
+\DeclareMathOperator{\Img}{Im}        % image of a map
+\DeclareMathOperator{\Ima}{Im}        % imaginary part -- prints like \Img, kept apart on purpose
+\DeclareMathOperator{\Rea}{Re}        % real part (\Re is the fraktur symbol)
+\DeclareMathOperator{\Sol}{Sol}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\blockdiag}{blockdiag}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Orth}{O}        % matrix groups O(n), U(n), SO(n), SU(n)
+\DeclareMathOperator{\Unit}{U}
+\DeclareMathOperator{\SOrth}{SO}
+\DeclareMathOperator{\SUnit}{SU}
+\newcommand{\gEig}{\widetilde{\Eig}}  % generalized eigenspace (ch. 28.b)
+\newcommand{\transp}{^{\transposesymbol}}  % transpose: write A\transp, never A^T
 ```
 
 * **Trailing Notes on Statements (`\exhint`, `\exinfo`, `\exsol`):**
@@ -232,12 +251,12 @@ You are authorized to improve the prose and apply the established "House Style" 
   ```latex
   \begin{exercise}[Matrix Diagonalization]
     ... statement ...
-    \exhint[Official hint]{Recall that distinct eigenvalues yield linearly independent eigenvectors.}
+    \exhint[Official Hint]{Recall that distinct eigenvalues yield linearly independent eigenvectors.}
     \exinfo{This exercise is Problem 2.1 of Problem Sheet 6, Linear Algebra II, Spring Semester 2026.}
     \exsol{sol:matrix_diag}
   \end{exercise}
   ```
-  * **`\exhint[Label]{...}`** takes an optional label (default `Hint`). Uses outline lightbulb icon `\faLightbulb[regular]` in `HintTint`. Use `[Official hint]` or `[Tutor's hint]` where appropriate.
+  * **`\exhint[Label]{...}`** takes an optional label (default `Hint`). Uses outline lightbulb icon `\faLightbulb[regular]` in `HintTint`. The label always names the hint's origin, using exactly one of the three forms listed under *Exercise Hints* above: `[Official Hint]`, `[Hint (Y. St\"aubli)]` or `[Hint (Prof. Biran)]`. A bare `[Hint]` says nothing about where the hint came from and is not used.
   * **`\exinfo{...}`** gives problem provenance (where it comes from). Renders with `\faTag` in `TextMetaNote`. Always write as a full sentence ending in a period (e.g., "*This exercise is Problem 3.2 of Problem Sheet 3, ...*").
   * **`\exsol{sol:label}`** provides a clickable forward link to the worked solution in the solutions section/appendix (renders with `\faCheckCircle[regular]` in `SolTint` linking via `\cpageref`).
   * **Order when multiple appear:** `\exhint` first $\to$ `\exinfo` second $\to$ `\exsol` last.
@@ -264,7 +283,11 @@ You are authorized to improve the prose and apply the established "House Style" 
 * **Math Operators**: Use the following custom operators:
 
 ```latex
-\Eig, \End, \Tr, \Sp, \rank, \sgn, \Hom, \id, \M
+\Eig, \gEig, \End, \Tr, \Sp, \rank, \sgn, \Hom, \id, \M, \GL, \ColS, \RowS, \Fib,
+\Img, \Ima, \Rea, \Sol, \Spec, \diag, \blockdiag, \adj, \dist,
+\Orth, \Unit, \SOrth, \SUnit, \transp
 ```
+
+Never write `\operatorname{...}` for one of these. In particular `\Img` (image of a map) and `\Ima` (imaginary part) both print "Im" but must not be swapped.
 
 * **Remark**: You are encouraged to suggest more math operators or environments on the fly if you believe they will improve document consistency. Moreover, any suggestion on how to extend the instructions above are just as welcome.

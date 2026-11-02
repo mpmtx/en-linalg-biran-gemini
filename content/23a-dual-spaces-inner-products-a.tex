@@ -36,7 +36,7 @@ Consider now an inner product space $(V, \langle \cdot, \cdot \rangle)$ over $K$
 \label{claim:linearity_phi_u}
 The map $\varphi_u$ is linear.
 \end{claim*}
-(This is left as an exercise).
+(This is left as an exercise, see \cpageref{sol:linearity_phi_u}).
 
 % Thm 23.a.1
 \begin{theorem}[Riesz Representation Theorem for Inner Product Spaces]
@@ -60,12 +60,12 @@ Define $u := \sum_{i=1}^n \overline{\varphi(e_i)} \cdot e_i$. It follows that $\
 
 \textbf{Uniqueness of $u$:} Suppose that $\varphi_{u_1} = \varphi_{u_2}$ for $u_1, u_2 \in V$. This implies that $\langle v, u_1 \rangle = \langle v, u_2 \rangle$ for all $v \in V$. By a previous result (\cref{lem:basic_properties_inner_prod} \textbf{(c)}), this implies that $u_1 = u_2$.
 
-The statements about the linearity of $\Phi$ are left as an exercise.
+The statements about the linearity of $\Phi$ are left as an exercise (see \cpageref{sol:dual_space_inner_product_isomorphism}).
 \end{proof}
 
 \begin{exercise}[Dual Inner Product and Isometry via Riesz Map]
   \label{exc:dual_space_inner_product_isometry}
-  Let $(V, \langle \cdot, \cdot \rangle)$ be a finite-dimensional Euclidean vector space, and consider the isomorphism
+  Let $(V, \langle \cdot, \cdot \rangle)$ be a finite-di\-men\-sional Euclidean vector space, and consider the isomorphism
   \[
   \delta \colon V \longrightarrow V^* := \Hom(V, \mathbb{R}), \qquad v \longmapsto \delta(v) := \langle v, \cdot \rangle.
   \]
@@ -90,7 +90,7 @@ The statements about the linearity of $\Phi$ are left as an exercise.
     \item Explain why this does not contradict \cref{thm:dual_space_inner_product_isomorphism}.
   \end{enumerate}
   \exhint[Hint (Y. St\"aubli)]{(a) Suppose such a continuous $g \in C[-1, 1]$ exists. For each $n \in \mathbb{N}$, consider the continuous tent functions $f_n(x) = \max\{0, 1 - n|x|\}$. Then $\varphi(f_n) = f_n(0) = 1$, but $\langle f_n, g \rangle = \int_{-1/n}^{1/n} f_n(x) g(x) \, dx \to 0$ as $n \to \infty$ because $|g(x)| \le M$ is bounded. This yields $1 = 0$, a contradiction.
-  (b) \Cref{thm:dual_space_inner_product_isomorphism} assumes that $\dim V < \infty$, whereas $C[-1, 1]$ is infinite-dimensional.}
+  (b) \Cref{thm:dual_space_inner_product_isomorphism} assumes that $\dim V < \infty$, whereas $C[-1, 1]$ is infinite-di\-men\-sional.}
   \exinfo{This exercise is Problem 5 of Problem Sheet 24, Linear Algebra II, Spring Semester 2026, ETH Zurich (Lecturer: Prof. P. Biran).}
 \exsol{sol:riesz_failure_infinite_dimensions}
 \end{exercise}
@@ -164,7 +164,7 @@ The map $T'$ is a linear map.
 For $K = \mathbb{R}$, the maps $\Phi_W$, $\Phi_V$, and $T^*$ are linear, and therefore $T'$ is also linear.
 For $K = \mathbb{C}$, the maps $\Phi_W$ and $\Phi_V$ are additive but only $\mathbb{C}$-antilinear. This implies that $\Phi_V^{-1}$ is also additive and $\mathbb{C}$-antilinear (this is an exercise to check!).
 The map $T^*$ remains linear.
-Consequently, $T'(w_1 + w_2) = T'(w_1) + T'(w_2)$ (exercise).\label{exc:additivity_T_prime}
+Consequently, $T'(w_1 + w_2) = T'(w_1) + T'(w_2)$ (exercise, see \cpageref{sol:additivity_T_prime}).\label{exc:additivity_T_prime}
 Now, let $c \in \mathbb{C}$ and $w \in W$. We compute:
 \begin{align*}
     T'(cw) &= (\Phi_V^{-1} \circ T^* \circ \Phi_W)(cw) \\
@@ -214,7 +214,7 @@ Let $V, W, U$ be inner product spaces over $K$ (where $K = \mathbb{R}$ or $\math
         &= \langle v, (S^*+T^*)(w) \rangle.
     \end{align*}
     This holds for all $v \in V$, which implies $(S+T)^*(w) = (S^*+T^*)(w)$. Since this holds for all $w \in W$, we conclude that $(S+T)^* = S^* + T^*$.
-    \item This is left as an exercise.
+    \item This is left as an exercise (see \cpageref{sol:properties_adjoint_map_c}).
     \item Let $v \in V$ and $w \in W$. We have:
     \begin{align*}
         \langle w, (T^*)^*(v) \rangle &= \langle T^*(w), v \rangle \\
@@ -223,7 +223,7 @@ Let $V, W, U$ be inner product spaces over $K$ (where $K = \mathbb{R}$ or $\math
         &= \langle w, T(v) \rangle.
     \end{align*}
     This holds for all $w \in W$, which implies $(T^*)^*(v) = T(v)$. Since this holds for all $v \in V$, we conclude that $(T^*)^* = T$.
-    \item This is left as an exercise.
+    \item This is left as an exercise (see \cpageref{sol:properties_adjoint_map_e}).
     \item Let $v \in V$ and $u \in U$. We have:
     \begin{align*}
         \langle v, (R \circ T)^*(u) \rangle &= \langle (R \circ T)(v), u \rangle \\
@@ -308,7 +308,7 @@ Only \textbf{(a)} is established from scratch; the notes then deduce the other t
 
 \begin{exercise}[Invariant Subspaces and the Adjoint Map \faHeart]
   \label{exc:invariant_subspaces_adjoint}
-  Let $V$ be a finite-dimensional inner product space over $K \in \{\mathbb{R}, \mathbb{C}\}$, let $T \in \End(V)$, and let $U \subseteq V$ be a subspace. Prove that $U$ is $T$-invariant if and only if $U^\perp$ is $T^*$-invariant.
+  Let $V$ be a finite-di\-men\-sional inner product space over $K \in \{\mathbb{R}, \mathbb{C}\}$, let $T \in \End(V)$, and let $U \subseteq V$ be a subspace. Prove that $U$ is $T$-invariant if and only if $U^\perp$ is $T^*$-invariant.
   \exhint[Hint (Y. St\"aubli)]{Suppose $T(U) \subseteq U$. Let $w \in U^\perp$. We must show $T^*(w) \in U^\perp$, meaning $\langle u, T^*(w) \rangle = 0$ for all $u \in U$. By definition of the adjoint, $\langle u, T^*(w) \rangle = \langle T(u), w \rangle$. Since $T(u) \in U$ and $w \in U^\perp$, this inner product is zero, so $T^*(w) \in U^\perp$.
   Conversely, if $U^\perp$ is $T^*$-invariant, applying the forward direction to $T^*$ and $U^\perp$ gives that $(U^\perp)^\perp$ is $(T^*)^*$-invariant. Since $(U^\perp)^\perp = U$ (using $\dim V < \infty$, \cref{cor:bidual_orthogonal_complement}) and $(T^*)^* = T$, this shows $T(U) \subseteq U$.}
   \exinfo{This exercise is Problem 1 of Problem Sheet 25, Linear Algebra II, Spring Semester 2026, ETH Zurich (Lecturer: Prof. P. Biran).}
@@ -317,7 +317,7 @@ Only \textbf{(a)} is established from scratch; the notes then deduce the other t
 
 \begin{exercise}[Cancellation Property of \texorpdfstring{$f^* \circ f$}{f* f} \faHeart]
   \label{exc:cancellation_adjoint_composite}
-  Let $V$ be a finite-dimensional Euclidean vector space, and let $f, g_1, g_2 \in \End(V)$ be endomorphisms satisfying
+  Let $V$ be a finite-di\-men\-sional Euclidean vector space, and let $f, g_1, g_2 \in \End(V)$ be endomorphisms satisfying
   \[
   f^* \circ f \circ g_1 = f^* \circ f \circ g_2.
   \]
@@ -384,7 +384,7 @@ Let $K = \mathbb{R}, \mathbb{C}$, and let $A, B \in \M_{m \times n}(K)$ and $C \
 \end{proposition}
 
 \begin{proof}
-This is left as an exercise. (The verification is carried out in the solutions at the end of this section.)
+This is left as an exercise. (The verification is carried out in the solutions at the end of this section, on \cpageref{sol:properties_adjoint_matrix}.)
 \end{proof}
 
 

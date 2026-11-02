@@ -61,7 +61,7 @@
 
 \begin{exercise}[Subsets of Non-Injective and Non-Surjective Linear Maps]
 \label{exc:hom_non_injective_non_surjective_not_subspaces}
-Let $V$ and $W$ be finite-dimensional vector spaces over a field $K$.
+Let $V$ and $W$ be finite-di\-men\-sional vector spaces over a field $K$.
 \begin{enumerate}
     \item Suppose that $2 \le \dim V \le \dim W$. Show that the set
     \[
@@ -89,7 +89,7 @@ Therefore, $\alpha \cdot (T_1 + T_2) = \alpha \cdot T_1 + \alpha \cdot T_2$.
 \begin{theorem}[The Canonical Isomorphism from the Homomorphism Space $\Hom(V,W)$ 
    to the Matrix Space $\M_{m \times n}(K)$]
   \label{thm:homomorphism_isomorphism}
-  Let $V$ and $W$ be finite-dimensional vector spaces over $K$, let $\mathcal{B} = (v_1, \dots, v_n)$ be a basis for $V$, and let $\mathcal{C} = (w_1, \dots, w_m)$ be a basis for $W$. Then, $\Psi_{\mathcal{C}}^{\mathcal{B}} \colon \Hom(V,W) \to \M_{m \times n}(K)$, defined by
+  Let $V$ and $W$ be finite-di\-men\-sional vector spaces over $K$, let $\mathcal{B} = (v_1, \dots, v_n)$ be a basis for $V$, and let $\mathcal{C} = (w_1, \dots, w_m)$ be a basis for $W$. Then, $\Psi_{\mathcal{C}}^{\mathcal{B}} \colon \Hom(V,W) \to \M_{m \times n}(K)$, defined by
   \[ \Psi_{\mathcal{C}}^{\mathcal{B}}(T) := [T]_{\mathcal{C}}^{\mathcal{B}} = \begin{pmatrix} | & & | \\ [T(v_1)]_{\mathcal{C}} & \dots & [T(v_n)]_{\mathcal{C}} \\ | & & | \end{pmatrix}, \]
   is a linear map, and moreover, an isomorphism.
 \end{theorem}
@@ -131,7 +131,7 @@ Therefore, $\alpha \cdot (T_1 + T_2) = \alpha \cdot T_1 + \alpha \cdot T_2$.
   \[
   \Hom(V,W) \cong \M_{m \times n}(K).
   \]
-  This means $\Hom(V,W)$ is a finite-dimensional space. Furthermore, isomorphic spaces have the same dimension by \cref{cor:iso_iff_equal_dimension}, so
+  This means $\Hom(V,W)$ is a finite-di\-men\-sional space. Furthermore, isomorphic spaces have the same dimension by \cref{cor:iso_iff_equal_dimension}, so
   \[
   \dim \Hom(V,W) = \dim \M_{m \times n}(K) = m \cdot n,
   \]
@@ -181,7 +181,7 @@ A bijective homomorphism of rings is called an \newterm{isomorphism of rings}; i
 % cor:18.a.4
 \begin{corollary}[The Ring of Endomorphisms]
   \label{cor:endomorphism_ring}
-  Let $V$ be a vector space over $K$. Then, $\End(V) := \Hom(V,V)$ is a ring with a unity. This ring is, in general, not commutative. The multiplication in $\End(V)$ is given by composition $T_1 \cdot T_2 := T_1 \circ T_2$ for all $T_1, T_2 \in \Hom(V,V)$, and the unity is $\id_V$. Moreover, if $V$ is finite-dimensional with $\dim V = n$, and $\mathcal{B} = (w_1, \dots, w_n)$ is a basis for $V$, then $\Psi_{\mathcal{B}}^{\mathcal{B}} \colon \Hom(V,V) \to \M_{n \times n}(K)$ is an isomorphism of rings.
+  Let $V$ be a vector space over $K$. Then, $\End(V) := \Hom(V,V)$ is a ring with a unity. This ring is, in general, not commutative. The multiplication in $\End(V)$ is given by composition $T_1 \cdot T_2 := T_1 \circ T_2$ for all $T_1, T_2 \in \Hom(V,V)$, and the unity is $\id_V$. Moreover, if $V$ is finite-di\-men\-sional with $\dim V = n$, and $\mathcal{B} = (w_1, \dots, w_n)$ is a basis for $V$, then $\Psi_{\mathcal{B}}^{\mathcal{B}} \colon \Hom(V,V) \to \M_{n \times n}(K)$ is an isomorphism of rings.
 \end{corollary}
 
 % The notes give a proof sketch here; the verification below is Gemini's
@@ -210,7 +210,7 @@ A bijective homomorphism of rings is called an \newterm{isomorphism of rings}; i
   \end{enumerate}
   Thus, $\End(V)$ is a ring with unity $\id_V$. It is generally not commutative, as demonstrated by matrix multiplication.
 
-  Now, assume $V$ is finite-dimensional with $\dim V = n$, and let $\mathcal{B}$ be a basis for $V$. We have already established that $\Psi_{\mathcal{B}}^{\mathcal{B}} \colon \End(V) \to \M_{n \times n}(K)$ is a linear isomorphism, this being \cref{thm:homomorphism_isomorphism} with $W = V$ and $\mathcal{C} = \mathcal{B}$. To prove it is a ring isomorphism, we must show it preserves the multiplicative structure and the multiplicative identity.
+  Now, assume $V$ is finite-di\-men\-sional with $\dim V = n$, and let $\mathcal{B}$ be a basis for $V$. We have already established that $\Psi_{\mathcal{B}}^{\mathcal{B}} \colon \End(V) \to \M_{n \times n}(K)$ is a linear isomorphism, this being \cref{thm:homomorphism_isomorphism} with $W = V$ and $\mathcal{C} = \mathcal{B}$. To prove it is a ring isomorphism, we must show it preserves the multiplicative structure and the multiplicative identity.
 
   \begin{enumerate}
     \item \textbf{Preservation of Multiplication}: For any $T_1, T_2 \in \End(V)$, a fundamental result from Linear Algebra I states that the matrix representation of a composition of linear maps is the product of their matrix representations (the composition rule, on \cpageref{prop:representation_matrix_of_composition}). That is,
@@ -272,7 +272,7 @@ Show that the map $D \colon K_{\text{row}}^n \to (K_{\text{col}}^n)^*$, $D(\ell)
 \label{def:dual_basis_functionals}
 \defterm{dual basis}
 % Extractor: Gemini 3.1 Pro
-Let $V$ be a finite-dimensional vector space over $K$, and let $\mathcal{B} = (v_1, \dots, v_n)$ be a basis for $V$. For $1 \leq i \leq n$, define a functional $v_i^* \in V^*$ as follows: $v_i^*(v_j) := \delta_{ij}$. This means that $v_i^*(v_i) = 1$, and $v_i^*(v_j) = 0$ for all $j \neq i$. Since $v_1, \dots, v_n$ form a basis for $V$, our definition determines uniquely a well-defined functional $v_i^* \colon V \to K$
+Let $V$ be a finite-di\-men\-sional vector space over $K$, and let $\mathcal{B} = (v_1, \dots, v_n)$ be a basis for $V$. For $1 \leq i \leq n$, define a functional $v_i^* \in V^*$ as follows: $v_i^*(v_j) := \delta_{ij}$. This means that $v_i^*(v_i) = 1$, and $v_i^*(v_j) = 0$ for all $j \neq i$. Since $v_1, \dots, v_n$ form a basis for $V$, our definition determines uniquely a well-defined functional $v_i^* \colon V \to K$
 % Creator: Opus 5
 (this is \cref{thm:existence_uniqueness_linear_map}: prescribing the values on a basis arbitrarily determines one and only one linear map).
 \end{definition*}
@@ -290,7 +290,7 @@ Let $V$ be a finite-dimensional vector space over $K$, and let $\mathcal{B} = (v
   The claim just proven shows that $v_1^*, \dots, v_n^*$ span $V^*$. Since $\dim V^* = \dim V = n$ by \cref{cor:dim_dual}, it follows that $v_1^*, \dots, v_n^*$ form a basis for $V^*$: a list of $n$ vectors spanning an $n$-dimensional space is a basis, by \cref{thm:basis_equivalent_characterizations}.
 \end{proof}
 
-\begin{question}Let $V$ be a finite-dimensional vector space over $K$, and let $\mathcal{B}$ and $\mathcal{C}$ be two bases for $V$. $\mathcal{B}^*$ and $\mathcal{C}^*$ are two bases for $V^*$. What is the relation between $[\id_{V^*}]_{\mathcal{B}^*}^{\mathcal{C}^*}$ and $[\id_V]_{\mathcal{B}}^{\mathcal{C}}$?
+\begin{question}Let $V$ be a finite-di\-men\-sional vector space over $K$, and let $\mathcal{B}$ and $\mathcal{C}$ be two bases for $V$. $\mathcal{B}^*$ and $\mathcal{C}^*$ are two bases for $V^*$. What is the relation between $[\id_{V^*}]_{\mathcal{B}^*}^{\mathcal{C}^*}$ and $[\id_V]_{\mathcal{B}}^{\mathcal{C}}$?
 \end{question}
 
 % prop:18.a.8
@@ -391,7 +391,7 @@ Let $f \colon V \to W$ be a linear map between vector spaces over $K$. Which of 
 
 \begin{exercise}[Isomorphisms between Hom Spaces and Trace Pairing]
 \label{exc:hom_dual_isomorphism_trace_pairing}
-Let $V$ and $W$ be finite-dimensional vector spaces over a field $K$.
+Let $V$ and $W$ be finite-di\-men\-sional vector spaces over a field $K$.
 \begin{enumerate}[label=\textbf{(\alph*)}]
     \item Show that $\Hom(V, W) \cong \Hom(W^*, V^*)$ via the assignment $T \mapsto T^*$.
     \item Let $\Tr \in \Hom(V, V)^*$ be the trace functional defined by $\Tr(T) := \Tr([T]_{\mathcal{B}}^{\mathcal{B}}) = \sum_{i=1}^n ([T]_{\mathcal{B}}^{\mathcal{B}})_{ii}$ for any chosen basis $\mathcal{B}$ of $V$.
@@ -415,7 +415,7 @@ Let $V$ be a vector space over $K$. We have $V^*$, but also $V^{**} := (V^*)^*$,
 \end{theorem}
 
 \begin{remark}
-  The map $\tau \colon V \to (V^*)^*$ exists and is defined in the same way as above regardless of $V$ being finite- or infinite-dimensional. Moreover, $\tau$ is always injective. However, when $V$ is infinite-dimensional, $\tau$ fails to be surjective.
+  The map $\tau \colon V \to (V^*)^*$ exists and is defined in the same way as above regardless of $V$ being finite- or infinite-di\-men\-sional. Moreover, $\tau$ is always injective. However, when $V$ is infinite-di\-men\-sional, $\tau$ fails to be surjective.
 \end{remark}
 
 \begin{proof}
@@ -433,7 +433,7 @@ Let $V$ be a vector space over $K$. We have $V^*$, but also $V^{**} := (V^*)^*$,
 \end{proof}
 
 \begin{remark}
-  \Cref{thm:natural_map_injective} is not true for infinite-dimensional vector spaces. More specifically, $\tau \colon V \to (V^*)^*$ is injective, but not surjective. In fact, when $V$ is infinite-dimensional, $(V^*)^*$ is not isomorphic to $V$.
+  \Cref{thm:natural_map_injective} is not true for infinite-di\-men\-sional vector spaces. More specifically, $\tau \colon V \to (V^*)^*$ is injective, but not surjective. In fact, when $V$ is infinite-di\-men\-sional, $(V^*)^*$ is not isomorphic to $V$.
 \end{remark}
 
 \subsection{Naturality}
@@ -485,7 +485,7 @@ Hence, $(T^*)^*(\tau_V(v)) = \tau_W(T(v))$ for every $v \in V$, which is precise
 
 \begin{exercise}[Every Finite-Dimensional Space is a Dual Space]
 \label{exc:every_finite_dim_is_dual_sc}
-Is every finite-dimensional vector space $V$ over $K$ isomorphic to the dual space of some finite-dimensional vector space?
+Is every finite-di\-men\-sional vector space $V$ over $K$ isomorphic to the dual space of some finite-di\-men\-sional vector space?
 \begin{enumerate}
     \item True
     \item False
@@ -708,7 +708,7 @@ Thus, $\mathbb{R}^3 = U \oplus U'$. Geometrically, this means any point in 3D sp
 
 \begin{exercise}[Subspaces, Complements, and Dual Spaces \faHeart]
 \label{exc:subspace_complement_dual_decomposition}
-Let $V$ be a finite-dimensional vector space over a field $K$.
+Let $V$ be a finite-di\-men\-sional vector space over a field $K$.
 \begin{enumerate}
     \item Let $U \subseteq V$ be a linear subspace and $W \subseteq V$ a linear complement ($V = U \oplus W$). Define an explicit isomorphism between $V$ and the external direct sum $U \oplus W$.
     \item Show that every linear functional $\alpha \colon U \to K$ can be extended to a linear functional $\tilde{\alpha} \colon V \to K$ (i.e., $\tilde{\alpha}|_U = \alpha$). Does $\tilde{\alpha}$ depend on the choice of the complement $W$ of $U$?
@@ -724,7 +724,7 @@ Let $V$ be a finite-dimensional vector space over a field $K$.
 
 \begin{exercise}[Direct Sum Decompositions of Homomorphism Spaces \faHeart]
 \label{exc:hom_direct_sum_decompositions}
-Let $U, V, W_1, W_2$ be finite-dimensional vector spaces over a field $K$.
+Let $U, V, W_1, W_2$ be finite-di\-men\-sional vector spaces over a field $K$.
 \begin{enumerate}
     \item Construct an explicit natural isomorphism
     \[
@@ -947,11 +947,11 @@ We now define a map $\pi \colon V \to V/U$ by $\pi(v) := [v] \in V/U$ for all $v
 \begin{proposition}[Dimension of the Quotient Space]
 % prop:18.c.4
   \label{prop:dim_quotient}
-  Suppose that $V$ is a finite-dimensional vector space. Then, $V/U$ is also finite-dimensional, and $\dim V/U = \dim V - \dim U$.
+  Suppose that $V$ is a finite-di\-men\-sional vector space. Then, $V/U$ is also finite-di\-men\-sional, and $\dim V/U = \dim V - \dim U$.
 \end{proposition}
 
 \begin{proof}
-  We have seen that $\pi \colon V \to V/U$ is a surjective linear map, this being \cref{prop:quotient_map}. This guarantees that $V/U$ is finite-dimensional. (Generally, if $T \colon W' \to W''$ is a surjective linear map and $W'$ is finite-dimensional, then $W''$ is also finite-dimensional, because the images of a basis of $W'$ span $W''$).
+  We have seen that $\pi \colon V \to V/U$ is a surjective linear map, this being \cref{prop:quotient_map}. This guarantees that $V/U$ is finite-di\-men\-sional. (Generally, if $T \colon W' \to W''$ is a surjective linear map and $W'$ is finite-di\-men\-sional, then $W''$ is also finite-di\-men\-sional, because the images of a basis of $W'$ span $W''$).
 
   We now apply the Rank-Nullity Theorem, \cref{thm:rank_nullity}, to $\pi$:
   \[ \dim V = \dim \ker(\pi) + \dim \Img(\pi). \]
@@ -1121,7 +1121,7 @@ Determine a subset of the standard basis $(e_1, e_2, e_3, e_4, e_5)$ of $\mathbb
   \begin{enumerate}
     \item $U^\perp \subseteq V^*$ is a linear subspace.
     \item There is a canonical isomorphism $(V/U)^* \cong U^\perp$.
-    \item If $V$ is finite-dimensional, then $U^* \cong V^*/U^\perp$.
+    \item If $V$ is finite-di\-men\-sional, then $U^* \cong V^*/U^\perp$.
   \end{enumerate}
 \end{proposition}
 
@@ -1145,7 +1145,7 @@ Determine a subset of the standard basis $(e_1, e_2, e_3, e_4, e_5)$ of $\mathbb
 
     We claim that $L \circ P = \id_{U^\perp}$ and $P \circ L = \id_{(V/U)^*}$. Indeed, for all $S \colon V/U \to K$, we have $P \circ L(S) = P(S \circ \pi) = S$, because of the uniqueness statement in \cref{thm:universal_property_quotient}. Also, for all $T \in U^\perp$, $L \circ P(T) = L(T') = T' \circ \pi = T$. This proves that $L$ is bijective, and since we know $L$ is linear, it is an isomorphism. It follows that $P$ is also a linear isomorphism, being the inverse map of the bijective linear map $L$ (\cref{lem:bijective_is_iso}).
 
-    \item Assume $V$ is finite-dimensional. Consider the restriction map $R \colon V^* \to U^*$ defined by $R(\varphi) := \varphi|_U$ for all $\varphi \in V^*$. 
+    \item Assume $V$ is finite-di\-men\-sional. Consider the restriction map $R \colon V^* \to U^*$ defined by $R(\varphi) := \varphi|_U$ for all $\varphi \in V^*$. 
 
     \begin{exercise}[Linearity of the Restriction Map]
       \label{exc:restriction_linear}

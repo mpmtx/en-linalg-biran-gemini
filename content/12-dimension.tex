@@ -57,7 +57,7 @@ The equivalence is established through the following implications:
 
 \textbf{(c) $\implies$ (a) \& (b):} This follows directly from the definition of a basis, which by requirement must satisfy both the condition of linear independence in \textbf{(a)} and the spanning property in \textbf{(b)}.
 
-\textbf{(b) $\implies$ (c):} If the spanning property in \textbf{(b)} holds, the list $v_1, \dots, v_n$ generates $V$. By the properties of finite-dimensional spaces, this list must contain a sublist that is a basis. Since $\dim V = n$, any basis must have exactly length $n$. Therefore, the sublist must be the entire list itself, making $v_1, \dots, v_n$ a basis as required by \textbf{(c)}.
+\textbf{(b) $\implies$ (c):} If the spanning property in \textbf{(b)} holds, the list $v_1, \dots, v_n$ generates $V$. By the properties of finite-di\-men\-sional spaces, this list must contain a sublist that is a basis. Since $\dim V = n$, any basis must have exactly length $n$. Therefore, the sublist must be the entire list itself, making $v_1, \dots, v_n$ a basis as required by \textbf{(c)}.
 \end{proof}
 
 
@@ -98,7 +98,7 @@ Let $n := \dim V$. We first establish that $U$ possesses a finite basis. If $U =
 
 If $\Sp(v_1) \neq U$, we choose a second vector $v_2 \in U \setminus \Sp(v_1)$. It follows from the properties of linear independence (\cref{lem:no_predecessor_span}) that the list $\{v_1, v_2\}$ is linearly independent. We proceed iteratively: after $j$ steps, we obtain a linearly independent list $\{v_1, \dots, v_j\} \subseteq U$. If $\Sp(v_1, \dots, v_j) = U$, the process terminates. Otherwise, we choose $v_{j+1} \in U \setminus \Sp(v_1, \dots, v_j)$. By the principle that adding a vector outside the span of a linearly independent set preserves independence (again \cref{lem:no_predecessor_span}), the expanded list $\{v_1, \dots, v_{j+1}\}$ remains linearly independent.
 
-Crucially, in a space $V$ of dimension $n$, no linearly independent list can exceed length $n$; this is \cref{thm:wrong_length_lists} \textbf{(2)}. Consequently, this algorithmic procedure must terminate in $k$ steps, where $k \le n$. At this stage, we have a list $\{v_1, \dots, v_k\}$ that is linearly independent and spans $U$, thereby constituting a basis for $U$. This implies $U$ is finite-dimensional and $\dim U = k \le n = \dim V$.
+Crucially, in a space $V$ of dimension $n$, no linearly independent list can exceed length $n$; this is \cref{thm:wrong_length_lists} \textbf{(2)}. Consequently, this algorithmic procedure must terminate in $k$ steps, where $k \le n$. At this stage, we have a list $\{v_1, \dots, v_k\}$ that is linearly independent and spans $U$, thereby constituting a basis for $U$. This implies $U$ is finite-di\-men\-sional and $\dim U = k \le n = \dim V$.
 
 It remains to settle when equality holds. One direction is immediate: if $U = V$, then clearly $\dim U = \dim V$. The converse is the substantial one.
 
@@ -199,9 +199,9 @@ V \supseteq U_0 \supseteq U_1 \supseteq U_2 \supseteq \dots \supseteq U_k \supse
 \]
 be a sequence of nested linear subspaces.
 \begin{enumerate}
-    \item If $V$ is finite-dimensional, prove that the sequence stabilises: there exists $N \in \mathbb{N}$ such that $U_n = U_N$ for all $n \ge N$.
-    \item Is this necessarily true if $V$ is infinite-dimensional?
-    \item Assume that $V$ is infinite-dimensional and that $\dim U_n \ge 1$ for all $n \in \mathbb{N}$. What can you say about $\bigcap_{n=0}^\infty U_n$? Can this intersection be $\{0\}$?
+    \item If $V$ is finite-di\-men\-sional, prove that the sequence stabilises: there exists $N \in \mathbb{N}$ such that $U_n = U_N$ for all $n \ge N$.
+    \item Is this necessarily true if $V$ is infinite-di\-men\-sional?
+    \item Assume that $V$ is infinite-di\-men\-sional and that $\dim U_n \ge 1$ for all $n \in \mathbb{N}$. What can you say about $\bigcap_{n=0}^\infty U_n$? Can this intersection be $\{0\}$?
 \end{enumerate}
 \exinfo{This exercise is Problem 6 of Problem Sheet 9, Linear Algebra I, Autumn Semester 2025.}
 \exsol{sol:descending_chains_subspaces}

@@ -64,7 +64,7 @@ What happens for bilinear forms?
 % Lemma. (27.a.3)
 \begin{lemma}[Change of Basis for Bilinear Forms]
 \label{lem:change_of_basis_bilinear}
-Let $V$ be a finite-dimensional vector space over $K$ and $\mathcal{C}, \mathcal{D}$ two bases of $V$. Let $B \colon V \times V \to K$ be a bilinear form. Then
+Let $V$ be a finite-di\-men\-sional vector space over $K$ and $\mathcal{C}, \mathcal{D}$ two bases of $V$. Let $B \colon V \times V \to K$ be a bilinear form. Then
 \[
 [B]_{\mathcal{D}} = \left([\id_V]_{\mathcal{C}}^{\mathcal{D}}\right)\transp \cdot [B]_{\mathcal{C}} \cdot [\id_V]_{\mathcal{C}}^{\mathcal{D}}.
 \]
@@ -294,7 +294,7 @@ Prof. Biran annotates the word \qt{symmetric} in the statement of \cref{thm:sylv
 % Thm. (27.a.6)
 \begin{theorem}[Sylvester's Law for Euclidean Spaces]
 \label{thm:sylvesters_euclidean}
-Let $V$ be a finite-dimensional Euclidean space of dimension $n$. Let $B \colon V \times V \to \mathbb{R}$ be a symmetric bilinear form. Then there exists an \emph{orthonormal} basis $\mathcal{C}$ for $V$ in which
+Let $V$ be a finite-di\-men\-sional Euclidean space of dimension $n$. Let $B \colon V \times V \to \mathbb{R}$ be a symmetric bilinear form. Then there exists an \emph{orthonormal} basis $\mathcal{C}$ for $V$ in which
 \[
 [B]_{\mathcal{C}} = \begin{pmatrix}
 \eta_1 & & & & & & & & \\
@@ -347,7 +347,7 @@ This is the step marked \qt{exc.} in the proof above, and it is what makes the w
 % Thm. (27.a.7)
 \begin{theorem}[Diagonalization of Symmetric Bilinear Forms]
 \label{thm:diagonalization_symmetric_bilinear}
-Let $V$ be a finite-dimensional vector space over a field $K$ of characteristic $0$. Let $B \colon V \times V \to K$ be a symmetric bilinear form. Then there exists a basis $\mathcal{C}$ of $V$ such that $[B]_{\mathcal{C}}$ is a diagonal matrix.
+Let $V$ be a finite-di\-men\-sional vector space over a field $K$ of characteristic $0$. Let $B \colon V \times V \to K$ be a symmetric bilinear form. Then there exists a basis $\mathcal{C}$ of $V$ such that $[B]_{\mathcal{C}}$ is a diagonal matrix.
 \end{theorem}
 
 \begin{proof}
@@ -442,7 +442,7 @@ Recall: A symmetric bilinear form $B \colon V \times V \to \mathbb{R}$ is called
 \begin{theorem}[Sylvester's Criterion]
 \label{thm:sylvesters_criterion}
 \defterm{Sylvester's criterion}
-Let $V$ be a finite-dimensional vector space over $\mathbb{R}$ and $B \colon V \times V \to \mathbb{R}$ a symmetric bilinear form. Then the following conditions are equivalent:
+Let $V$ be a finite-di\-men\-sional vector space over $\mathbb{R}$ and $B \colon V \times V \to \mathbb{R}$ a symmetric bilinear form. Then the following conditions are equivalent:
 \begin{enumerate}[label=\textbf{(\alph*)}]
     \item $B$ is positive definite.
     \item There exists a basis $\mathcal{C} := (e_1, \dots, e_n)$ for $V$ such that the principal minors 
@@ -570,7 +570,7 @@ This is the implication Prof. Biran leaves with \qt{Exc. Similar ideas.} Prove t
   \end{enumerate}
   \exhint[Hint (Y. St\"aubli)]{Prove (A) $\implies$ (B) $\implies$ (C) $\implies$ (A).
   (A) $\implies$ (B): If $(\lambda, v)$ is an eigenvalue-eigenvector pair with $v \neq 0$, then $0 < v\transp A v = v\transp (\lambda v) = \lambda \|v\|^2 \implies \lambda > 0$.
-  (B) $\implies$ (C): By the Spectral Theorem for symmetric matrices (\cref{thm:spectral_thm_matrices}), $A = O D O\transp$ with $O \in \Orth(n)$ and $D = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$ where each $\lambda_i > 0$. Set $\sqrt{D} := \operatorname{diag}(\sqrt{\lambda_1}, \dots, \sqrt{\lambda_n})$ and $S := O \sqrt{D} O\transp$. Then $S\transp = S$, $S^2 = O D O\transp = A$, and $\det(S) = \prod \sqrt{\lambda_i} > 0$, so $S$ is invertible.
+  (B) $\implies$ (C): By the Spectral Theorem for symmetric matrices (\cref{thm:spectral_thm_matrices}), $A = O D O\transp$ with $O \in \Orth(n)$ and $D = \diag(\lambda_1, \dots, \lambda_n)$ where each $\lambda_i > 0$. Set $\sqrt{D} := \diag(\sqrt{\lambda_1}, \dots, \sqrt{\lambda_n})$ and $S := O \sqrt{D} O\transp$. Then $S\transp = S$, $S^2 = O D O\transp = A$, and $\det(S) = \prod \sqrt{\lambda_i} > 0$, so $S$ is invertible.
   (C) $\implies$ (A): For any $v \ne 0$, $v\transp A v = v\transp S^2 v = v\transp S\transp S v = \|Sv\|^2$. Since $S$ is invertible and $v \ne 0$, $Sv \ne 0$, hence $\|Sv\|^2 > 0$.}
   \exinfo{This exercise is Problem 4 of Problem Sheet 26, Linear Algebra II, Spring Semester 2026, ETH Zurich (Lecturer: Prof. P. Biran).}
 \exsol{sol:positive_definite_equivalent_characterizations}

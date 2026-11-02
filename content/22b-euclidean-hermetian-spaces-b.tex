@@ -82,11 +82,11 @@ Let $\emptyset \neq S, T \subseteq V$. Then:
     \]
     This implies that $\alpha v + \beta w \in S^\perp$. Thus, $S^\perp$ is a linear subspace.
     
-    \item Showing $0^\perp = V$ is left as an exercise. Let $v \in V^\perp$. Then $\langle v, w \rangle = 0$ for all $w \in V$. In particular, $\langle v, v \rangle = 0$, which implies $v = 0$. This shows $V^\perp \subseteq \{0\}$. Since it is clear that $\{0\} \subseteq V^\perp$, we conclude $V^\perp = \{0\}$.
+    \item Showing $0^\perp = V$ is left as an exercise (see \cpageref{sol:orthogonal_complement_properties_b}). Let $v \in V^\perp$. Then $\langle v, w \rangle = 0$ for all $w \in V$. In particular, $\langle v, v \rangle = 0$, which implies $v = 0$. This shows $V^\perp \subseteq \{0\}$. Since it is clear that $\{0\} \subseteq V^\perp$, we conclude $V^\perp = \{0\}$.
     
     \item If $S \cap S^\perp = \emptyset$, we are done. Otherwise, assume that $s \in S \cap S^\perp$. This implies that $\langle s, s \rangle = 0$, which yields $s = 0$.
     
-    \item (Exercise).
+    \item (Exercise, see \cpageref{sol:orthogonal_complement_properties_d}).
     
     \item We have $S \subseteq \Sp(S)$. By statement \textbf{(d)}, this yields $(\Sp(S))^\perp \subseteq S^\perp$.
     Next, we will show that $S^\perp \subseteq (\Sp(S))^\perp$. Indeed, let $v \in S^\perp$, and let $u \in \Sp(S)$. We can write $u = \sum_{i=1}^k \alpha_i u_i$ with $\alpha_i \in K$ and $u_i \in S$ for all $1 \leq i \leq k$. We compute:
@@ -177,7 +177,7 @@ Now, part \textbf{(I)} is exactly $\widetilde{P}_U(v)$ from the previous proof, 
 
 \begin{exercise}[Best Approximation Theorem \faHeart]
   \label{exc:best_approximation_subspace}
-  Let $V$ be an inner product space, let $U \subseteq V$ be a finite-dimensional subspace, and let $P_U \colon V \to U$ denote the orthogonal projection onto $U$. Let $v \in V$. Show that for every $u \in U$,
+  Let $V$ be an inner product space, let $U \subseteq V$ be a finite-di\-men\-sional subspace, and let $P_U \colon V \to U$ denote the orthogonal projection onto $U$. Let $v \in V$. Show that for every $u \in U$,
   \[
   \|v - P_U(v)\| \le \|v - u\|,
   \]
