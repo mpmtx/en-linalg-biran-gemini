@@ -175,8 +175,8 @@ Let us try to find a Fibonacci sequence $\mathcal{F} \ne 0$ such that $S(\mathca
   Let $V$ be a $K$-vector space and let $F, G \in \End(V)$. Show:
   \begin{enumerate}[label=\textbf{(\alph*)}]
     \item If $v \in V$ is an eigenvector of $F \circ G$ with eigenvalue $\lambda$ and $G(v) \neq 0$, then $G(v)$ is an eigenvector of $G \circ F$ with eigenvalue $\lambda$.
-    \item If $V$ is finite-dimensional, then $F \circ G$ and $G \circ F$ have exactly the same eigenvalues.
-    \item Give a counterexample to \textbf{(b)} when $V$ is infinite-dimensional.
+    \item If $V$ is finite-di\-men\-sional, then $F \circ G$ and $G \circ F$ have exactly the same eigenvalues.
+    \item Give a counterexample to \textbf{(b)} when $V$ is infinite-di\-men\-sional.
   \end{enumerate}
   \exhint[Hint (Y. St\"aubli)]{\textbf{(a)} Apply $G$ to both sides of $(F \circ G)(v) = \lambda v$ to obtain $(G \circ F)(G(v)) = \lambda G(v)$. \textbf{(b)} For $\lambda \neq 0$, part \textbf{(a)} immediately transfers the eigenvalue. If $\lambda = 0$ is an eigenvalue of $F \circ G$, then $F \circ G$ is not invertible, which in finite dimensions means $\det(F \circ G) = \det(F)\det(G) = 0$, so $\det(G \circ F) = 0$, proving that $0$ is also an eigenvalue of $G \circ F$. \textbf{(c)} On $V = K^\infty$ or $K_0^\infty$, let $F$ be the right shift $(x_0, x_1, \dots) \mapsto (0, x_0, x_1, \dots)$ and $G$ the left shift $(x_0, x_1, \dots) \mapsto (x_1, x_2, \dots)$.}
   \exinfo{This exercise is Problem 6 of Problem Sheet 18, Linear Algebra II, Spring Semester 2026, ETH Zurich (Lecturer: Prof. P. Biran).}
@@ -278,7 +278,7 @@ Finally, that scalar determinant is the value $P_T(\lambda)$ of the formal polyn
 
 \begin{exercise}[Eigenspaces of an Invertible Endomorphism and Its Inverse]
   \label{exc:eigenspaces_inverse_endomorphism}
-  Let $K$ be a field and let $V$ be a finite-dimensional vector space over $K$. Assume $T \in \End(V)$ is invertible. Show that for every non-zero scalar $\lambda \in K^*$,
+  Let $K$ be a field and let $V$ be a finite-di\-men\-sional vector space over $K$. Assume $T \in \End(V)$ is invertible. Show that for every non-zero scalar $\lambda \in K^*$,
   \[
   \Eig_T(\lambda) = \Eig_{T^{-1}}(1/\lambda).
   \]
@@ -339,7 +339,7 @@ Finally, that scalar determinant is the value $P_T(\lambda)$ of the formal polyn
 
 \begin{definition}[Trace]\label{def:trace}
   Let $A \in \M_{n \times n}(K)$. Define the \newterm{trace} (in German: \germanterm{Spur}) of $A$, denoted $\Tr(A) := \sum_{i=1}^n A_{ii} \in K$ (which is the sum of the entries along the diagonal of $A$).
-  If $V$ is a finite-dimensional vector space over $K$ and $T \in \End(V)$, define $\Tr(T) := \Tr([T]_{\mathcal{B}}^{\mathcal{B}})$, where $\mathcal{B}$ is some basis for $V$. We will see soon that $\Tr(T)$ is well defined (i.e., it does not depend on the choice of $\mathcal{B}$).
+  If $V$ is a finite-di\-men\-sional vector space over $K$ and $T \in \End(V)$, define $\Tr(T) := \Tr([T]_{\mathcal{B}}^{\mathcal{B}})$, where $\mathcal{B}$ is some basis for $V$. We will see soon that $\Tr(T)$ is well defined (i.e., it does not depend on the choice of $\mathcal{B}$).
 \end{definition}
 
 \begin{lemma}[Properties of Trace]\label{lem:properties_trace}
@@ -405,7 +405,7 @@ Let $A \in \M_{n \times n}(K)$ and $P_A(x) = c_n x^n + c_{n-1} x^{n-1} + \dots +
     \item The only way to write $0 = u_1 + \dots + u_r$, with $u_i \in U_i$ for all $i$, is with $u_1 = \dots = u_r = 0$.
     \item For all $2 \le j \le r$, we have $U_j \cap (U_1 + \dots + U_{j-1}) = \{0\}$.
   \end{enumerate}
-  Under the additional assumption that $U_1, \dots, U_r$ are all finite-dimensional, $U_1 + \dots + U_r$ is a direct sum if and only if whenever $\mathcal{B}_1, \dots, \mathcal{B}_r$ are bases for $U_1, \dots, U_r$ respectively, then $(\mathcal{B}_1, \dots, \mathcal{B}_r)$ forms a basis for $U_1 + \dots + U_r$.
+  Under the additional assumption that $U_1, \dots, U_r$ are all finite-di\-men\-sional, $U_1 + \dots + U_r$ is a direct sum if and only if whenever $\mathcal{B}_1, \dots, \mathcal{B}_r$ are bases for $U_1, \dots, U_r$ respectively, then $(\mathcal{B}_1, \dots, \mathcal{B}_r)$ forms a basis for $U_1 + \dots + U_r$.
 \exinfo{This exercise is taken from Prof.~Biran's handwritten lecture notes.}
 \exsol{sol:direct_sum_conditions}
 \end{exercise}
@@ -769,14 +769,14 @@ Sometimes, $\lambda$ is also a zero of $q(x)$, so $q(x) = (x-\lambda) \cdot h(x)
     For each $0 \le k \le n$, let $c_k$ be the coefficient of $x^k$ in the characteristic polynomial $P_T(x) = \sum_{k=0}^n c_k x^k$. Give an explicit formula for $c_k$ in terms of the eigenvalues $\lambda_1, \dots, \lambda_n$.
     \item Let $B \in \M_{2 \times 2}(\mathbb{R})$ be a diagonalizable matrix with $\Tr(B) = 0$. Show that $\det(B) \le 0$.
   \end{enumerate}
-  \exhint[Hint (Y. St\"aubli)]{\textbf{(a)} Choose a basis $\mathcal{B}$ of eigenvectors so that $[T]_{\mathcal{B}}^{\mathcal{B}} = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$. Use the invariance of the trace $\Tr(T) = \Tr([T]_{\mathcal{B}}^{\mathcal{B}})$ and determinant $\det(T) = \det([T]_{\mathcal{B}}^{\mathcal{B}})$. Expanding $P_T(x) = \prod_{i=1}^n (\lambda_i - x)$ yields $c_k = (-1)^k e_{n-k}(\lambda_1, \dots, \lambda_n)$, where $e_m(\lambda_1, \dots, \lambda_n) = \sum_{1 \le i_1 < \dots < i_m \le n} \lambda_{i_1} \cdots \lambda_{i_m}$ is the $m$-th elementary symmetric polynomial. \textbf{(b)} The two real eigenvalues satisfy $\lambda_1 + \lambda_2 = \Tr(B) = 0$, so $\lambda_2 = -\lambda_1$. Hence, $\det(B) = \lambda_1 \lambda_2 = -\lambda_1^2 \le 0$.}
+  \exhint[Hint (Y. St\"aubli)]{\textbf{(a)} Choose a basis $\mathcal{B}$ of eigenvectors so that $[T]_{\mathcal{B}}^{\mathcal{B}} = \diag(\lambda_1, \dots, \lambda_n)$. Use the invariance of the trace $\Tr(T) = \Tr([T]_{\mathcal{B}}^{\mathcal{B}})$ and determinant $\det(T) = \det([T]_{\mathcal{B}}^{\mathcal{B}})$. Expanding $P_T(x) = \prod_{i=1}^n (\lambda_i - x)$ yields $c_k = (-1)^k e_{n-k}(\lambda_1, \dots, \lambda_n)$, where $e_m(\lambda_1, \dots, \lambda_n) = \sum_{1 \le i_1 < \dots < i_m \le n} \lambda_{i_1} \cdots \lambda_{i_m}$ is the $m$-th elementary symmetric polynomial. \textbf{(b)} The two real eigenvalues satisfy $\lambda_1 + \lambda_2 = \Tr(B) = 0$, so $\lambda_2 = -\lambda_1$. Hence, $\det(B) = \lambda_1 \lambda_2 = -\lambda_1^2 \le 0$.}
   \exinfo{This exercise is Problem 5 of Problem Sheet 19, Linear Algebra II, Spring Semester 2026, ETH Zurich (Lecturer: Prof. P. Biran).}
 \exsol{sol:trace_determinant_char_poly_diagonalizable}
 \end{exercise}
 
 \begin{exercise}[Multiplicities on Direct Sums and Simultaneous Diagonalizability \faHeart]
   \label{exc:direct_sum_multiplicities_and_simultaneous_diagonalizability}
-  Let $V$ be a finite-dimensional vector space over a field $K$.
+  Let $V$ be a finite-di\-men\-sional vector space over a field $K$.
   \begin{enumerate}[label=\textbf{(\alph*)}]
     \item Let $f \in \End(V)$ and suppose $V = V_1 \oplus \dots \oplus V_r$ is a direct sum decomposition of $V$ into $f$-invariant subspaces $V_i$. Show that for every $\lambda \in K$, the algebraic (resp.\ geometric) multiplicity of $\lambda$ as an eigenvalue of $f$ is the sum of the algebraic (resp.\ geometric) multiplicities of $\lambda$ as an eigenvalue of the restrictions $f|_{V_i}$:
     \[
@@ -825,7 +825,7 @@ Sometimes, $\lambda$ is also a zero of $q(x)$, so $q(x) = (x-\lambda) \cdot h(x)
 \end{remark}
 
 \begin{corollary}[Trigonalizability over $\mathbb{C}$]\label{cor:complex_trigonalizable}
-  Let $V$ be a finite-dimensional vector space over $\mathbb{C}$. Then every $T \in \End(V)$ is trigonalizable.
+  Let $V$ be a finite-di\-men\-sional vector space over $\mathbb{C}$. Then every $T \in \End(V)$ is trigonalizable.
 \end{corollary}
 
 % Creator: Opus 5
@@ -1083,7 +1083,7 @@ A natural question arises: can we find a polynomial that completely \qt{kills} o
   By setting $g(x) := a_r x^r + \dots + a_1 x + a_0$, we obtain the desired non-zero annihilating polynomial.
 \end{proof}
 
-A similar logic applies seamlessly to any abstract operator $T \in \End(V)$, where $V$ is a finite-dimensional vector space over $K$, writing $T^k := \underbrace{T \circ \dots \circ T}_{k}$ and defining $g(T) := a_d T^d + \dots + a_1 T + a_0 \id_V$. Since annihilating polynomials exist, it is mathematically fruitful to look for the \qt{simplest} one, which acts as a sort of algebraic DNA for the operator.
+A similar logic applies seamlessly to any abstract operator $T \in \End(V)$, where $V$ is a finite-di\-men\-sional vector space over $K$, writing $T^k := \underbrace{T \circ \dots \circ T}_{k}$ and defining $g(T) := a_d T^d + \dots + a_1 T + a_0 \id_V$. Since annihilating polynomials exist, it is mathematically fruitful to look for the \qt{simplest} one, which acts as a sort of algebraic DNA for the operator.
 
 \begin{definition}[The Minimal Polynomial]
   % def:21.d.1
@@ -1120,7 +1120,7 @@ Two points are needed before the notation $m_T(x)$ is legitimate, and the hypoth
   A^2 + 2A + 5I_n = 0
   \]
   if and only if $n$ is even.
-  \exhint[Official Hint]{The claim is true. ($\implies$) If $n$ is odd, the characteristic polynomial $P_A(x) \in \mathbb{R}[x]$ has odd degree $n$ and hence must have at least one real root $\lambda \in \mathbb{R}$. By \cref{exc:eigenvalues_are_roots_of_annihilating_polynomials}, $\lambda$ must satisfy $\lambda^2 + 2\lambda + 5 = (\lambda+1)^2 + 4 = 0$, which has no solutions in $\mathbb{R}$, contradiction. ($\impliedby$) If $n = 2m$ is even, consider the $2 \times 2$ matrix $J = \left(\begin{smallmatrix} -1 & -2 \\ 2 & -1 \end{smallmatrix}\right)$, which satisfies $J^2 + 2J + 5I_2 = 0$. The block diagonal matrix $A = \operatorname{diag}(J, \dots, J)$ consisting of $m$ blocks of $J$ satisfies $A^2 + 2A + 5I_n = 0$.}
+  \exhint[Official Hint]{The claim is true. ($\implies$) If $n$ is odd, the characteristic polynomial $P_A(x) \in \mathbb{R}[x]$ has odd degree $n$ and hence must have at least one real root $\lambda \in \mathbb{R}$. By \cref{exc:eigenvalues_are_roots_of_annihilating_polynomials}, $\lambda$ must satisfy $\lambda^2 + 2\lambda + 5 = (\lambda+1)^2 + 4 = 0$, which has no solutions in $\mathbb{R}$, contradiction. ($\impliedby$) If $n = 2m$ is even, consider the $2 \times 2$ matrix $J = \left(\begin{smallmatrix} -1 & -2 \\ 2 & -1 \end{smallmatrix}\right)$, which satisfies $J^2 + 2J + 5I_2 = 0$. The block diagonal matrix $A = \diag(J, \dots, J)$ consisting of $m$ blocks of $J$ satisfies $A^2 + 2A + 5I_n = 0$.}
   \exinfo{This exercise is Problem 6 of Problem Sheet 20, Linear Algebra II, Spring Semester 2026, ETH Zurich (Lecturer: Prof. P. Biran).}
 \exsol{sol:annihilating_quadratic_even_dimension}
 \end{exercise}
@@ -1134,7 +1134,7 @@ While the minimal polynomial guarantees that an operator satisfies \textit{some}
   Let $A \in \M_{n \times n}(K)$. Then
   \begin{enumerate}[label=\textbf{(\alph*)}]
     \item  $P_A(A) = 0$.
-    \item Let $V$ be a finite-dimensional vector space over $K$, and $T \in \End(V)$. Then $P_T(T) = 0$.
+    \item Let $V$ be a finite-di\-men\-sional vector space over $K$, and $T \in \End(V)$. Then $P_T(T) = 0$.
   \end{enumerate}
 \end{theorem}
 
@@ -1315,7 +1315,7 @@ If Cayley-Hamilton holds for matrices, then $P_A(A) = 0$, meaning $[P_T(T)]_{\ma
 \begin{exercise}[Topological Proof of the Cayley-Hamilton Theorem]
   \label{exc:cayley_hamilton_via_density}
   Use \cref{exc:similarity_of_matrix_polynomials,exc:density_of_diagonalizable_matrices,exc:convergence_of_matrix_polynomials} to prove the Cayley-Hamilton theorem for all complex matrices: $P_A(A) = 0$ for every $A \in \M_{n \times n}(\mathbb{C})$.
-  \exhint[Official Hint]{First, verify $P_D(D) = 0$ for any diagonal matrix $D = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$. Next, for any diagonalizable matrix $M = Q D Q^{-1}$, use \cref{exc:similarity_of_matrix_polynomials} to deduce $P_M(M) = P_M(Q D Q^{-1}) = Q P_M(D) Q^{-1} = Q P_D(D) Q^{-1} = 0$. Finally, for an arbitrary matrix $A \in \M_{n \times n}(\mathbb{C})$, choose a sequence of diagonalizable matrices $A_k \to A$ (\cref{exc:density_of_diagonalizable_matrices}). The characteristic polynomials $P_{A_k}(x)$ converge coefficient-wise to $P_A(x)$ by continuity of the determinant. Applying \cref{exc:convergence_of_matrix_polynomials} yields $P_A(A) = \lim_{k \to \infty} P_{A_k}(A_k) = \lim_{k \to \infty} 0 = 0$.}
+  \exhint[Official Hint]{First, verify $P_D(D) = 0$ for any diagonal matrix $D = \diag(\lambda_1, \dots, \lambda_n)$. Next, for any diagonalizable matrix $M = Q D Q^{-1}$, use \cref{exc:similarity_of_matrix_polynomials} to deduce $P_M(M) = P_M(Q D Q^{-1}) = Q P_M(D) Q^{-1} = Q P_D(D) Q^{-1} = 0$. Finally, for an arbitrary matrix $A \in \M_{n \times n}(\mathbb{C})$, choose a sequence of diagonalizable matrices $A_k \to A$ (\cref{exc:density_of_diagonalizable_matrices}). The characteristic polynomials $P_{A_k}(x)$ converge coefficient-wise to $P_A(x)$ by continuity of the determinant. Applying \cref{exc:convergence_of_matrix_polynomials} yields $P_A(A) = \lim_{k \to \infty} P_{A_k}(A_k) = \lim_{k \to \infty} 0 = 0$.}
   \exinfo{This exercise is Problem 4 of Problem Sheet 21, Linear Algebra II, Spring Semester 2026, ETH Zurich (Lecturer: Prof. P. Biran).}
 \exsol{sol:cayley_hamilton_via_density}
 \end{exercise}
@@ -1526,7 +1526,7 @@ $[S]_{\mathcal{B}}^{\mathcal{B}} \;=\;$
 % Extractor: Gemini 3.1 Pro
 
 \begin{proof}[Algebraic Proof of Cayley-Hamilton]
-  Let $V$ be finite-dimensional, and $T \in \End(V)$. We want to show $P_T(T) = 0$, meaning $P_T(T)v = 0$ for all $v \in V$.
+  Let $V$ be finite-di\-men\-sional, and $T \in \End(V)$. We want to show $P_T(T) = 0$, meaning $P_T(T)v = 0$ for all $v \in V$.
 
   Let $v \in V$, $v \neq 0$. Consider the cyclic subspace $\langle v \rangle_T$. Take the maximal integer $d \ge 1$ such that $v, Tv, \dots, T^{d-1}v$ are linearly independent. Then $T^d v = c_0 v + \dots + c_{d-1}T^{d-1}v$ for some $c_0, \dots, c_{d-1} \in K$, and $\dim \langle v \rangle_T = d$ by \cref{lemma:cyclic_basis_companion}.
   Put $n := \dim V$. If $d < n$, extend this basis $\mathcal{B}$ to a full basis $\mathcal{C} := (v, \dots, T^{d-1}v, w_1, \dots, w_{n-d})$ for $V$. (If $d = n$, take $\mathcal{C} := \mathcal{B}$; the block $C$ below is then empty and $P_C(x) = 1$, so the argument goes through unchanged.) The matrix representation of $T$ with respect to $\mathcal{C}$ is block upper-triangular:

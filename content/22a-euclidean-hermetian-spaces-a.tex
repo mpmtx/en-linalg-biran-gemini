@@ -89,7 +89,7 @@ Let $V$ be a Euclidean/Hermitian vector space. Then:
     \item Let $w \in V$. If $\langle v, w \rangle = 0$ for all $v \in V$, then $w = 0$.
     \item Let $w_1, w_2 \in V$. If $\langle v, w_1 \rangle = \langle v, w_2 \rangle$ for all $v \in V$, then $w_1 = w_2$.
 \end{enumerate}
-All three parts are left as an exercise.
+All three parts are left as an exercise (see \cpageref{sol:basic_properties_inner_prod}).
 \end{lemma}
 
 % def 22.a.4
@@ -266,7 +266,7 @@ Is $\langle \cdot, \cdot \rangle_A$ a scalar product? In general, it is not. For
         \langle v, v \rangle_D = v\transp \cdot D \cdot v = a_1 v_1^2 + \dots + a_n v_n^2 \geq 0,
     \]
     with equality if and only if $v_i = 0$ for all $i$.
-    \item Let $A = \left(\begin{smallmatrix} a & b \\ b & d \end{smallmatrix}\right) \in \M_{2 \times 2}(\mathbb{R})$. Then $A$ is positive definite if and only if $a > 0$ and $\det(A) > 0$. (Exercise).
+    \item Let $A = \left(\begin{smallmatrix} a & b \\ b & d \end{smallmatrix}\right) \in \M_{2 \times 2}(\mathbb{R})$. Then $A$ is positive definite if and only if $a > 0$ and $\det(A) > 0$. (Exercise, see \cpageref{sol:pos_def_examples_real_b}).
 \end{enumerate}
 \end{example}
 
@@ -475,7 +475,7 @@ Let's check positivity: let $0 \neq f \in C[a,b]$. Then $\langle f, f \rangle = 
     \[
     \|x + y\|^2 + \|x - y\|^2 = 2\|x\|^2 + 2\|y\|^2 \quad \forall x, y \in V.
     \]
-    \item Let $V$ be a finite-dimensional real vector space. Consider the mapping
+    \item Let $V$ be a finite-di\-men\-sional real vector space. Consider the mapping
     \[
     \|\cdot\|_1 : V \longrightarrow \mathbb{R}_{\ge 0}, \qquad v = (v_1, \dots, v_n) \longmapsto \sum_{i=1}^n |v_i|.
     \]
@@ -629,7 +629,7 @@ Let's check positivity: let $0 \neq f \in C[a,b]$. Then $\langle f, f \rangle = 
 \label{prop:matrix_representation_orthonormal}
     Let $V, W$ be vector spaces over $K$ ($= \mathbb{R}$ or $\mathbb{C}$) and let $\langle \cdot, \cdot \rangle$ be an inner product on $W$. Let $\mathcal{B} = (v_1, \dots, v_n)$ be a basis for $V$ and $\mathcal{C} = (w_1, \dots, w_m)$ an \emph{orthonormal} basis for $W$. Let $T: V \to W$ be a linear map. Write $[T]_{\mathcal{C}}^{\mathcal{B}} = (a_{ij})$. Then $a_{ij} = \langle T(v_j), w_i \rangle$ for all $i,j$. 
     (If $\mathcal{C}$ is only an orthogonal basis, then $a_{ij} = \langle T(v_j), w_i \rangle / \langle w_i, w_i \rangle$).
-    The proof is left as an exercise.
+    The proof is left as an exercise (see \cpageref{sol:matrix_representation_orthonormal}).
 \end{proposition}
 
 So, having orthogonal/orthonormal bases for our spaces is useful!
@@ -693,7 +693,7 @@ So, having orthogonal/orthonormal bases for our spaces is useful!
 
 \begin{exercise}[Extending an Orthonormal System to an Orthonormal Basis]
   \label{exc:extend_orthonormal_system_sheet23}
-  Let $V$ be a finite-dimensional Euclidean vector space and let $S \subseteq V$ be an orthonormal system. Show that $S$ can be extended to an orthonormal basis of $V$.
+  Let $V$ be a finite-di\-men\-sional Euclidean vector space and let $S \subseteq V$ be an orthonormal system. Show that $S$ can be extended to an orthonormal basis of $V$.
   \exhint[Hint (Y. St\"aubli)]{Let $S = (u_1, \dots, u_k)$. By \cref{thm:properties_orthogonal_systems}(a), $S$ is linearly independent. By the Steinitz exchange lemma (\cref{lem:strong_steinitz}), we can extend $S$ to a basis $(u_1, \dots, u_k, v_{k+1}, \dots, v_n)$ of $V$. Now apply the Gram-Schmidt orthogonalization process (\cref{thm:gram_schmidt}) to this basis. Because $(u_1, \dots, u_k)$ is already orthonormal, the process leaves the first $k$ vectors unchanged ($w_i = u_i$ for $1 \le i \le k$), while orthogonalizing and normalizing the remaining vectors $v_{k+1}, \dots, v_n$, thus producing an orthonormal basis extending $S$.}
   \exinfo{This exercise is Problem 1 of Problem Sheet 23, Linear Algebra II, Spring Semester 2026, ETH Zurich (Lecturer: Prof. P. Biran).}
   % Points at THIS exercise's own solution. It used to read \exsol{sol:extend_orthonormal_system},

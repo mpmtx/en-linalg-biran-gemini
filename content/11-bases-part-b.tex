@@ -35,18 +35,18 @@ For steps $j = 1, 2, \dots, m$, we sequentially add $u_j$ to the list, behind th
 
 \subsection{The Existence and Uniqueness of Dimension}
 
-We are now ready to state and prove the foundational theorem of finite-dimensional vector spaces. It guarantees that bases always exist and that they provide an absolute, rigid measure of the \qt{size} of a vector space.
+We are now ready to state and prove the foundational theorem of finite-di\-men\-sional vector spaces. It guarantees that bases always exist and that they provide an absolute, rigid measure of the \qt{size} of a vector space.
 
 \begin{theorem}[The Basis Theorem]
 \label{thm:basis_theorem}
 \defterm{basis theorem}
-Let $V$ be a finite-dimensional vector space over $K$. Then $V$ has a basis with finitely many elements. 
+Let $V$ be a finite-di\-men\-sional vector space over $K$. Then $V$ has a basis with finitely many elements. 
 
 Moreover, \textbf{every} basis of $V$ is finite, and any two bases of $V$ have exactly the same number of elements.
 \end{theorem}
 
 \begin{remark}[Infinite Dimensional Spaces]
-This theorem is actually true even if $V$ is not finite-dimensional (this is known as the \qt{Hamel Basis Theorem} and requires Zorn's Lemma). However, in this course, we will only prove the theorem for finite-dimensional spaces. The infinite-dimensional case is rigorously covered in advanced algebra courses (e.g., \textit{Grundstrukturen} in the 2nd semester).
+This theorem is actually true even if $V$ is not finite-di\-men\-sional (this is known as the \qt{Hamel Basis Theorem} and requires Zorn's Lemma). However, in this course, we will only prove the theorem for finite-di\-men\-sional spaces. The infinite-di\-men\-sional case is rigorously covered in advanced algebra courses (e.g., \textit{Grundstrukturen} in the 2nd semester).
 \end{remark}
 
 \begin{exercise}[Countable Bases and Independent Subsets]
@@ -120,7 +120,7 @@ Because this theorem is so monumental, we will break its proof down into three d
 \subsubsection*{Statement 1: V has a finite basis.}
 
 \begin{proof}
-Because we assumed $V$ is finite-dimensional, there must exist some finite list of vectors that spans $V$. Let us call this spanning set $S = \{w_1, \dots, w_k\}$. If $S$ is already linearly independent, it is a basis, and we are done.
+Because we assumed $V$ is finite-di\-men\-sional, there must exist some finite list of vectors that spans $V$. Let us call this spanning set $S = \{w_1, \dots, w_k\}$. If $S$ is already linearly independent, it is a basis, and we are done.
 
 If $S$ is linearly dependent, we can extract a basis from it using the following systematic reduction algorithm (often called a \qt{Redundancy Filter}):
 
@@ -217,12 +217,12 @@ Because the number of elements in a basis is a rigid, absolute invariant of the 
 \begin{definition}[Dimension]
 \label{def:dimension}
 \defterm{dimension}
-Let $V$ be a finite-dimensional vector space over $K$. We define the \textbf{dimension} of $V$ to be the number of elements in any basis of $V$: if $\mathcal{B}$ is a basis of $V$ and $n$ is the number of its elements, we set
+Let $V$ be a finite-di\-men\-sional vector space over $K$. We define the \textbf{dimension} of $V$ to be the number of elements in any basis of $V$: if $\mathcal{B}$ is a basis of $V$ and $n$ is the number of its elements, we set
 \[
 \dim V := n \in \mathbb{Z}_{\ge 0}.
 \]
 
-If $V$ is not finite-dimensional, we write $\dim V = \infty$.
+If $V$ is not finite-di\-men\-sional, we write $\dim V = \infty$.
 \end{definition}
 
 \begin{importantremark}
@@ -282,7 +282,7 @@ If $S$ is a finite set, say $S = \{s_1, \dots, s_n\}$, can you construct an expl
 
 \begin{remark}
 \label{rem:infinite_function_space}
-When the domain $S$ is an infinite set, the space $K^S$ is infinite-dimensional. In this case, we unfortunately do not have a \qt{nice} or easily describable basis for it, and the formula above no longer applies: by \cref{def:dimension} we simply write $\dim K^S = \infty$. It is worth seeing why the obvious candidate fails. The functions $f_s$ of the exercise above are still linearly independent for infinite $S$, but they no longer span $K^S$, because a linear combination is a \emph{finite} sum and so can only produce functions that vanish outside a finite set. \Cref{exc:k_infinity_independent} is exactly this phenomenon for $S = \mathbb{Z}_{\ge 0}$.
+When the domain $S$ is an infinite set, the space $K^S$ is infinite-di\-men\-sional. In this case, we unfortunately do not have a \qt{nice} or easily describable basis for it, and the formula above no longer applies: by \cref{def:dimension} we simply write $\dim K^S = \infty$. It is worth seeing why the obvious candidate fails. The functions $f_s$ of the exercise above are still linearly independent for infinite $S$, but they no longer span $K^S$, because a linear combination is a \emph{finite} sum and so can only produce functions that vanish outside a finite set. \Cref{exc:k_infinity_independent} is exactly this phenomenon for $S = \mathbb{Z}_{\ge 0}$.
 \end{remark}
 \end{example}
 

@@ -103,7 +103,7 @@ Show that every additive map is automatically $\mathbb{Q}$-linear, so that
 
 \begin{example}[Matrix Transformation]
 \label{ex:matrix_transformation}
-This is a central example in finite-dimensional linear algebra. Let $A \in \M_{m \times n}(K)$ be a matrix. We define a map $T_A: K^n \to K^m$ via matrix-vector multiplication:
+This is a central example in finite-di\-men\-sional linear algebra. Let $A \in \M_{m \times n}(K)$ be a matrix. We define a map $T_A: K^n \to K^m$ via matrix-vector multiplication:
 \[
 T_A \left(\begin{smallmatrix} x_1 \\ \vdots \\ x_n \end{smallmatrix}\right) := A \cdot \left(\begin{smallmatrix} x_1 \\ \vdots \\ x_n \end{smallmatrix}\right).
 \]
@@ -175,7 +175,7 @@ Let $V$ and $W$ be vector spaces over a field $K$, and let $T: V \to W$ be a lin
 % thm:15.a.3
 \begin{theorem}[Existence and Uniqueness of Linear Maps on a Basis]
 \label{thm:existence_uniqueness_linear_map}
-Let $V$ and $W$ be vector spaces over $K$ with $V$ finite-dimensional, and let $\mathcal{B} = (v_1, \dots, v_n)$ be a basis for $V$. Given any arbitrary sequence of vectors $w_1, \dots, w_n \in W$, there exists a unique linear map $T: V \to W$ such that:
+Let $V$ and $W$ be vector spaces over $K$ with $V$ finite-di\-men\-sional, and let $\mathcal{B} = (v_1, \dots, v_n)$ be a basis for $V$. Given any arbitrary sequence of vectors $w_1, \dots, w_n \in W$, there exists a unique linear map $T: V \to W$ such that:
 \[
 T(v_i) = w_i, \quad \forall \, 1 \le i \le n.
 \]
@@ -360,7 +360,7 @@ Let $f \colon V \to W$ be a linear map of vector spaces over $K$.
     f^{-1}(W') := \{v \in V \mid f(v) \in W'\}
     \]
     is a linear subspace of $V$.
-    \item If $V$ is finite-dimensional, prove the dimension formula:
+    \item If $V$ is finite-di\-men\-sional, prove the dimension formula:
     \[
     \dim f^{-1}(W') = \dim \ker(f) + \dim\big(\Img(f) \cap W'\big).
     \]
@@ -564,9 +564,10 @@ w = T(x + u) = T(x) + T(u) = 0_W + T(u) = T(u).
 Being a bijective linear map, $T|_U$ is an isomorphism by \cref{lem:bijective_is_iso}. By \cref{thm:iso_preserves_bases}, it carries a basis of $U$ to a basis of $\Img(T)$, and therefore, $\dim U = \dim \Img(T)$.
 
 Finally, the dimension formula of \cref{prop:properties_of_sums} \textbf{(c)}, applied to the subspaces $\ker(T)$ and $U$, gives
-\[
-\dim V = \dim\big(\ker(T) + U\big) = \dim \ker(T) + \dim U - \underbrace{\dim\big(\ker(T) \cap U\big)}_{= \, 0} = \dim \ker(T) + \dim \Img(T). \qedhere
-\]
+\begin{align*}
+\dim V &= \dim\big(\ker(T) + U\big) = \dim \ker(T) + \dim U - \underbrace{\dim\big(\ker(T) \cap U\big)}_{= \, 0} \\
+&= \dim \ker(T) + \dim \Img(T). \qedhere
+\end{align*}
 \end{proof}
 
 % cor:15.b.10
@@ -712,7 +713,7 @@ Let $V$ be a vector space. A linear endomorphism $P \colon V \to V$ is called a 
 
 \begin{exercise}[Invertibility from a Three-Map Composition]
 \label{exc:invertibility_three_map_composition}
-Suppose $V$ is a finite-dimensional vector space over $K$, and let $S, T, U \in \Hom(V, V)$ be endomorphisms satisfying
+Suppose $V$ is a finite-di\-men\-sional vector space over $K$, and let $S, T, U \in \Hom(V, V)$ be endomorphisms satisfying
 \[
 S \circ T \circ U = \id_V.
 \]
@@ -723,7 +724,7 @@ Show that $T$ is invertible and that its inverse is given by $T^{-1} = U \circ S
 
 \begin{exercise}[Properties and Existence of Endomorphisms and Automorphisms]
 \label{exc:endomorphism_properties_true_false}
-Let $V$ be a finite-dimensional vector space over a field $K$. Prove or disprove each of the following statements:
+Let $V$ be a finite-di\-men\-sional vector space over a field $K$. Prove or disprove each of the following statements:
 \begin{enumerate}
     \item Let $V' \subseteq V$ be a linear subspace. Every automorphism $f \colon V' \to V'$ can be extended to an automorphism $\bar{f} \colon V \to V$ (i.e., $\bar{f}|_{V'} = f$).
     \item For every endomorphism $f \colon V \to V$, its image $\Img(f)$ is a linear complement of its kernel $\ker(f)$ in $V$.

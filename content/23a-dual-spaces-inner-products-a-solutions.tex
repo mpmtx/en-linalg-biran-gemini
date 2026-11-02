@@ -1,7 +1,7 @@
 % Solution: Gemini / Official Hybrid (Problem Sheet 23, Exercise 6)
 \begin{exercisesolution}[Solution to \cref{exc:dual_space_inner_product_isometry}]
 \label{sol:dual_space_inner_product_isometry}
-Let $(V, \langle \cdot, \cdot \rangle)$ be a finite-dimensional Euclidean vector space, and $\delta \colon V \to V^*$, $v \mapsto \langle v, \cdot \rangle$.
+Let $(V, \langle \cdot, \cdot \rangle)$ be a finite-di\-men\-sional Euclidean vector space, and $\delta \colon V \to V^*$, $v \mapsto \langle v, \cdot \rangle$.
 \begin{enumerate}[label=\textbf{(\alph*)}]
     \item \textbf{Existence and uniqueness of dual scalar product:}
     Since $\dim V < \infty$, the Riesz representation map $\delta \colon V \to V^*$ is a linear isomorphism by \cref{thm:dual_space_inner_product_isomorphism}.
@@ -54,9 +54,9 @@ Let $(V, \langle \cdot, \cdot \rangle)$ be a finite-dimensional Euclidean vector
     \]
     which is a contradiction. Hence, no such $g \in C[-1, 1]$ exists.
 
-    \item This does not contradict \cref{thm:dual_space_inner_product_isomorphism} because that theorem requires the vector space $V$ to be finite-dimensional, whereas $C[-1, 1]$ is infinite-dimensional. \qedhere
+    \item This does not contradict \cref{thm:dual_space_inner_product_isomorphism} because that theorem requires the vector space $V$ to be finite-di\-men\-sional, whereas $C[-1, 1]$ is infinite-di\-men\-sional. \qedhere
 \end{enumerate}
-\exinfo{Hybrid Solution (Gemini 3.7 Flash / Official Problem Sheet 24, Exercise 5). Shows failure of Riesz representation on infinite-dimensional $C[-1, 1]$ via delta evaluation.}
+\exinfo{Hybrid Solution (Gemini 3.7 Flash / Official Problem Sheet 24, Exercise 5). Shows failure of Riesz representation on infinite-di\-men\-sional $C[-1, 1]$ via delta evaluation.}
 \end{exercisesolution}
 
 % Solution: Gemini / Official Hybrid (Problem Sheet 25, Exercise 5)
@@ -88,7 +88,7 @@ Let $(V, \langle \cdot, \cdot \rangle)$ be a finite-dimensional Euclidean vector
     Testing with the standard basis vectors $a = e_k = (\delta_{ki})_{i=1}^\infty \in V$ gives $c_k = \langle e_k, c \rangle = f(e_k) = 1$ for all $k \in \mathbb{N}$.
     Thus $c = (1, 1, 1, \dots)$, which has infinitely many non-zero entries and hence does not belong to $V$. Thus, no adjoint $f^*$ exists. \qedhere
 \end{enumerate}
-\exinfo{Hybrid Solution (Gemini 3.7 Flash / Official Problem Sheet 25, Exercise 5). Proves adjoint map existence via Riesz representation and provides infinite-dimensional counterexample.}
+\exinfo{Hybrid Solution (Gemini 3.7 Flash / Official Problem Sheet 25, Exercise 5). Proves adjoint map existence via Riesz representation and provides infinite-di\-men\-sional counterexample.}
 \end{exercisesolution}
 
 % Official Solution (Problem Sheet 24, Exercise 6)
@@ -125,7 +125,7 @@ Let $(V, \langle \cdot, \cdot \rangle)$ be a finite-dimensional Euclidean vector
 % Solution: Gemini / Official Hybrid (Problem Sheet 25, Exercise 1)
 \begin{exercisesolution}[Solution to \cref{exc:invariant_subspaces_adjoint}]
 \label{sol:invariant_subspaces_adjoint}
-Let $V$ be a finite-dimensional inner product space, $T \in \End(V)$, and $U \subseteq V$ a subspace.
+Let $V$ be a finite-di\-men\-sional inner product space, $T \in \End(V)$, and $U \subseteq V$ a subspace.
 \begin{itemize}
     \item \emph{($\Rightarrow$):} Suppose $U$ is $T$-invariant, meaning $T(U) \subseteq U$.
     Let $w \in U^\perp$. We must show that $T^*(w) \in U^\perp$, i.e., $\langle u, T^*(w) \rangle = 0$ for all $u \in U$.

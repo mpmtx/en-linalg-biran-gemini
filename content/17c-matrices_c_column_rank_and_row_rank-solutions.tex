@@ -3,7 +3,7 @@
 % Official Solution (Problem Sheet 12, Exercise 1)
 \begin{exercisesolution}[Solution to \cref{exc:rank_one_all_ones_matrix}]
 \label{sol:rank_one_all_ones_matrix}
-Let $V$ and $W$ be finite-dimensional vector spaces over $K$ with $n = \dim V$ and $m = \dim W$, and let $T \in \Hom(V, W)$.
+Let $V$ and $W$ be finite-di\-men\-sional vector spaces over $K$ with $n = \dim V$ and $m = \dim W$, and let $T \in \Hom(V, W)$.
 
 \begin{itemize}
     \item \textbf{($\Leftarrow$) If $[T]_{\mathcal{C}}^{\mathcal{B}} = J_{m \times n}$ (the all-ones matrix):}
@@ -100,7 +100,7 @@ Thus, all five statements are equivalent to $\rank(M) = n$.
     \]
 
     \item \textbf{Matrix $B = \left((-1)^{k+\ell}(k + \ell - 1)\right)_{1 \le k, \ell \le n}$:}
-    Notice that $B = D \tilde{B} D$, where $D = \operatorname{diag}(-1, 1, -1, 1, \dots) \in \GL_n(\mathbb{Q})$ and $\tilde{B}_{k\ell} = k + \ell - 1$.
+    Notice that $B = D \tilde{B} D$, where $D = \diag(-1, 1, -1, 1, \dots) \in \GL_n(\mathbb{Q})$ and $\tilde{B}_{k\ell} = k + \ell - 1$.
     Since $D$ is invertible, $\rank(B) = \rank(\tilde{B})$ by \cref{lemma:rank_invariance_equivalence}.
     The $k$-th row of $\tilde{B}$ is:
     \[

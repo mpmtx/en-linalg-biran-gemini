@@ -199,7 +199,7 @@ Let $T \colon V \to W$ be an isomorphism with linear inverse $T^{-1} \colon W \t
         \item In contrast, every endomorphism $T \in \Hom_K(V, V)$ acts as $T = \lambda \id_V$ for a uniquely determined $\lambda \in K$. The map $\Phi \colon \Hom_K(V, V) \to K, T \mapsto \lambda$ is coordinate-free: for any non-zero vector $v \in V$, $\lambda$ is uniquely given by the ratio $T(v)/v$. One readily checks that $\Phi$ is an isomorphism of $K$-vector spaces (and even a ring isomorphism), providing a canonical identification $\Hom_K(V, V) \cong K$.
     \end{itemize}
 \end{enumerate}
-\exinfo{Official Solution (Problem Sheet 10, Exercise 1). Explains the canonical scalar isomorphism $\operatorname{End}(V) \cong K$ in dimension 1 versus non-canonical $V \cong K$.}
+\exinfo{Official Solution (Problem Sheet 10, Exercise 1). Explains the canonical scalar isomorphism $\End(V) \cong K$ in dimension 1 versus non-canonical $V \cong K$.}
 \end{exercisesolution}
 
 % Official Solution (Problem Sheet 11, Exercise 6)
@@ -267,10 +267,10 @@ Let $T_1, T_2 \in \Hom_K(V, K)$ with $\ker(T_1) = \ker(T_2) =: U$.
 % Solution: Gemini / Official Hybrid (Problem Sheet 12, Exercise 2)
 \begin{exercisesolution}[Solution to \cref{exc:invertibility_three_map_composition}]
 \label{sol:invertibility_three_map_composition}
-We are given $S, T, U \in \Hom(V, V)$ on a finite-dimensional space $V$ with $S \circ T \circ U = \id_V$.
+We are given $S, T, U \in \Hom(V, V)$ on a finite-di\-men\-sional space $V$ with $S \circ T \circ U = \id_V$.
 
 \begin{itemize}
-    \item Grouping the composition as $S \circ (T \circ U) = \id_V$: by \cref{cor:equal_dim_iso}, for endomorphisms on a finite-dimensional vector space, having a right inverse implies two-sided invertibility. Thus, $S$ and $T \circ U$ are invertible with $S^{-1} = T \circ U$. This implies:
+    \item Grouping the composition as $S \circ (T \circ U) = \id_V$: by \cref{cor:equal_dim_iso}, for endomorphisms on a finite-di\-men\-sional vector space, having a right inverse implies two-sided invertibility. Thus, $S$ and $T \circ U$ are invertible with $S^{-1} = T \circ U$. This implies:
     \[
     (T \circ U) \circ S = \id_V \implies T \circ (U \circ S) = \id_V.
     \]

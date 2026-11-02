@@ -323,7 +323,7 @@ Hence, $\{u_2, \dots, u_m\} \subseteq W$ is a linearly independent subset of car
 \begin{exercisesolution}[Solution to \cref{exc:descending_chains_subspaces}]
 \label{sol:descending_chains_subspaces}
 \begin{enumerate}[label=\textbf{(\alph*)}]
-    \item \textbf{Finite-dimensional case.} Suppose that $\dim V = d < \infty$. By \cref{prop:subspace_dimension_constraints}, every linear subspace of $V$ is finite-dimensional with $\dim U \le \dim V$. Since the sequence is nested with $U_{n+1} \subseteq U_n$, applying \cref{prop:subspace_dimension_constraints} gives $\dim U_{n+1} \le \dim U_n$ for all $n \ge 0$.
+    \item \textbf{Finite-di\-men\-sional case.} Suppose that $\dim V = d < \infty$. By \cref{prop:subspace_dimension_constraints}, every linear subspace of $V$ is finite-di\-men\-sional with $\dim U \le \dim V$. Since the sequence is nested with $U_{n+1} \subseteq U_n$, applying \cref{prop:subspace_dimension_constraints} gives $\dim U_{n+1} \le \dim U_n$ for all $n \ge 0$.
     
     Thus the sequence of dimensions
     \[
@@ -333,19 +333,19 @@ Hence, $\{u_2, \dots, u_m\} \subseteq W$ is a linearly independent subset of car
     \[
         \dim U_n = k \quad \text{for all } n \ge N.
     \]
-    For any $n \ge N$, we have $U_{n+1} \subseteq U_n$ and $\dim U_{n+1} = \dim U_n = k$. By the equality criterion of \cref{prop:subspace_dimension_constraints}, an inclusion of finite-dimensional subspaces with equal dimensions forces equality of the subspaces:
+    For any $n \ge N$, we have $U_{n+1} \subseteq U_n$ and $\dim U_{n+1} = \dim U_n = k$. By the equality criterion of \cref{prop:subspace_dimension_constraints}, an inclusion of finite-di\-men\-sional subspaces with equal dimensions forces equality of the subspaces:
     \[
         U_{n+1} = U_n \quad \text{for all } n \ge N.
     \]
     By induction, $U_n = U_N$ for all $n \ge N$, so the sequence stabilizes.
 
-    \item \textbf{Infinite-dimensional case.} This is not necessarily true if $V$ is infinite-dimensional. Consider the polynomial space $V := F[X]$ over the field $F$. For each $n \ge 0$, define the subspace
+    \item \textbf{Infinite-di\-men\-sional case.} This is not necessarily true if $V$ is infinite-di\-men\-sional. Consider the polynomial space $V := F[X]$ over the field $F$. For each $n \ge 0$, define the subspace
     \[
         U_n := \Sp(X^n, X^{n+1}, X^{n+2}, \dots) = \{p(X) \in F[X] \mid X^n \text{ divides } p(X)\}.
     \]
     Clearly $U_{n+1} \subseteq U_n$ for all $n \ge 0$. However, the monomial $X^n$ belongs to $U_n$ but $X^n \notin U_{n+1}$, so $U_{n+1} \subsetneq U_n$ is a strictly proper inclusion for every $n \ge 0$. Consequently, the sequence never stabilizes.
 
-    \item \textbf{Infinite intersection.} If $V$ is infinite-dimensional and $\dim U_n \ge 1$ for all $n \in \mathbb{N}$, the intersection $\bigcap_{n=0}^\infty U_n$ can be $\{0\}$.
+    \item \textbf{Infinite intersection.} If $V$ is infinite-di\-men\-sional and $\dim U_n \ge 1$ for all $n \in \mathbb{N}$, the intersection $\bigcap_{n=0}^\infty U_n$ can be $\{0\}$.
     
     To see this, consider again the nested sequence $U_n = \Sp(X^n, X^{n+1}, \dots) \subset F[X]$ from part \textbf{(b)}. Each subspace $U_n$ contains the infinite linearly independent set $\{X^k \mid k \ge n\}$, so $\dim U_n = \infty \ge 1$ for all $n$.
     
